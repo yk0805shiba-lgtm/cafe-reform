@@ -40,6 +40,24 @@
     "venue_name": "新宿文化センター 大ホール"
   },
   {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "festival",
+    "confidence": 0.85,
+    "content_hash": "608dd06c66244d16",
+    "description": "2026年7月19日（日）～7月20日（月） 開催概要 開催日時：2026年7月19日（日）～20日（月祝） 17:30～20:30 会場：…",
+    "ends_at": "2026-07-20T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_5927.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-07-19T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "2026 神楽坂夏まつり 盆踊り in 神楽坂 （7月19日～20日 りそな銀行神楽坂支店前）",
+    "uid": "55026f2c7bbe626f@market-intelligence"
+  },
+  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
@@ -78,6 +96,24 @@
     "title": "【共催】リアル恐竜ショー 恐竜パーク",
     "uid": "6f737b71f1e4e037@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "festival",
+    "confidence": 0.85,
+    "content_hash": "2b91e8f4a3192eb0",
+    "description": "ほおずき！阿波踊り！今年も神楽坂の夏がやってきた！神楽坂まつり開催！",
+    "ends_at": "2026-07-25T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_5730.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-07-22T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "第52回  神楽坂まつり",
+    "uid": "141af01f19747797@market-intelligence"
   },
   {
     "address": "東京都新宿区",
