@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>今日のタイムブロック</title>
+<style>
+  :root{
+    --bg:#EEF1F6; --surface:#FFFFFF; --ink:#1C2438; --ink-soft:#5A6478;
+    --line:#DBE1EC; --accent:#34406B; --accent-soft:#E7EAF3;
+    --hi:#E07A5F; --mid:#3E8E8B; --lo:#92A0B6;
+    --radius:14px;
+    --px-per-min:1.15;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:20px 16px 60px;}
+
+  header.top{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 20px;margin-bottom:18px;}
+  .title{flex:1 1 240px;}
+  .title h1{font-size:26px;line-height:1.15;margin:0 0 2px;font-weight:800;letter-spacing:-.01em;}
+  .title p{margin:0;color:var(--ink-soft);font-size:13px;}
+  .controls{display:flex;gap:14px;flex-wrap:wrap;}
+  .field{display:flex;flex-direction:column;gap:4px;}
+  .field label{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--ink-soft);text-transform:uppercase;}
+  .field input{
+    font:inherit;font-variant-numeric:tabular-nums;border:1px solid var(--line);background:var(--surface);
+    border-radius:10px;padding:9px 11px;color:var(--ink);min-width:120px;
+  }
+  .field input:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+
+  .grid{display:grid;grid-template-columns:minmax(300px,1fr) minmax(320px,1.1fr);gap:18px;align-items:start;}
+  @media (max-width:760px){.grid{grid-template-columns:1fr;}}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);}
+  .card h2{
+    font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);
+    margin:0;padding:14px 16px;border-bottom:1px solid var(--line);
+  }
+  .pad{padding:14px 16px;}
+
+  .add{display:grid;grid-template-columns:1fr 86px 92px;gap:8px;}
+  .add input,.add select{
+    font:inherit;border:1px solid var(--line);border-radius:10px;padding:9px 10px;background:#fff;color:var(--ink);width:100%;
+  }
+  .add input:focus-visible,.add select:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+  .add-btn{
+    grid-column:1 / -1;margin-top:8px;font:inherit;font-weight:700;cursor:pointer;
+    background:var(--accent);color:#fff;border:none;border-radius:10px;padding:11px;transition:filter .15s;
+  }
+  .add-btn:hover{filter:brightness(1.08);}
+  .add-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+
+  .toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;}
+  .ghost{
+    font:inherit;font-size:13px;font-weight:600;cursor:pointer;background:none;border:1px solid var(--line);
+    border-radius:9px;padding:7px 11px;color:var(--accent);
+  }
+  .ghost:hover{background:var(--accent-soft);}
+  .ghost:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+
+  ul.tasks{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;}
+  li.task{
+    display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:11px;padding:9px 10px;background:#fff;
+  }
+  li.task .dot{width:10px;height:10px;border-radius:50%;flex:none;}
+  li.task .name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600;font-size:14px;}
+  li.task .mins{font-variant-numeric:tabular-nums;color:var(--ink-soft);font-size:13px;flex:none;}
+  .chip{font:inherit;font-size:11px;font-weight:800;cursor:default;border:none;border-radius:7px;padding:4px 8px;color:#fff;flex:none;}
+  .iconbtn{
+    font:inherit;font-size:13px;cursor:pointer;background:none;border:1px solid var(--line);border-radius:7px;
+    width:28px;height:28px;display:grid;place-items:center;color:var(--ink-soft);flex:none;line-height:1;
+  }
+  .iconbtn:hover{border-color:var(--accent);color:var(--accent);}
+  .iconbtn:focus-visible{outline:2px solid var(--accent);outline-offset:1px;}
+  .iconbtn.del:hover{border-color:var(--hi);color:var(--hi);}
+
+  .summary{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);}
+  .summary div{display:flex;flex-direction:column;}
+  .summary .k{font-size:11px;color:var(--ink-soft);font-weight:700;letter-spacing:.03em;}
+  .summary .v{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums;}
+
+  .timeline{position:relative;padding:14px 16px 16px;}
+  .tl-row{position:relative;display:flex;gap:12px;}
+  .rail{flex:none;width:46px;position:relative;}
+  .tl-track{flex:1;position:relative;border-left:2px solid var(--line);min-height:80px;}
+  .block{
+    position:absolute;left:10px;right:0;border-radius:10px;padding:8px 11px;color:#fff;overflow:hidden;
+    box-shadow:0 1px 2px rgba(28,36,56,.08);display:flex;flex-direction:column;justify-content:center;
+  }
+  .block .bt{font-size:11px;font-variant-numeric:tabular-nums;opacity:.92;font-weight:700;letter-spacing:.02em;}
+  .block .bn{font-size:14px;font-weight:700;line-height:1.25;overflow:hidden;text-overflow:ellipsis;}
+  .tick{
+    position:absolute;left:0;width:46px;text-align:right;padding-right:8px;font-size:11px;
+    font-variant-numeric:tabular-nums;color:var(--ink-soft);font-weight:700;transform:translateY(-7px);
+  }
+  .tick::after{content:"";position:absolute;right:-2px;top:7px;width:6px;height:2px;background:var(--line);}
+  .nowline{position:absolute;left:0;right:0;height:0;border-top:2px solid var(--hi);}
+  .nowline::before{
+    content:"今";position:absolute;left:-30px;top:-9px;font-size:10px;font-weight:800;color:var(--hi);
+    background:var(--surface);padding:0 3px;
+  }
+
+  .empty{color:var(--ink-soft);font-size:14px;text-align:center;padding:34px 12px;}
+  .empty b{color:var(--ink);font-weight:700;}
+
+  footer.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;align-items:center;}
+  .primary{
+    font:inherit;font-weight:800;cursor:pointer;background:var(--accent);color:#fff;border:none;border-radius:11px;
+    padding:13px 18px;transition:filter .15s;
+  }
+  .primary:hover{filter:brightness(1.08);}
+  .primary:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+  .primary:disabled{opacity:.4;cursor:not-allowed;filter:none;}
+
+  .gcal-btn{
+    font:inherit;font-weight:800;cursor:pointer;border:none;border-radius:11px;
+    padding:13px 18px;transition:filter .15s;
+    background:#4285F4;color:#fff;display:flex;align-items:center;gap:8px;
+  }
+  .gcal-btn:hover{filter:brightness(1.08);}
+  .gcal-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
+  .gcal-btn:disabled{opacity:.4;cursor:not-allowed;filter:none;}
+  .gcal-btn svg{flex:none;}
+
+  .danger{
+    font:inherit;font-weight:600;cursor:pointer;background:none;border:1px solid var(--line);border-radius:11px;
+    padding:13px 16px;color:var(--ink-soft);
+  }
+  .danger:hover{border-color:var(--hi);color:var(--hi);}
+
+  /* setup banner */
+  .setup-banner{
+    background:#FFF8E7;border:1px solid #F0D060;border-radius:12px;padding:14px 16px;
+    font-size:13px;line-height:1.7;margin-bottom:16px;
+  }
+  .setup-banner b{color:#7A5B00;}
+  .setup-banner code{background:#F0E8C8;padding:1px 5px;border-radius:4px;font-size:12px;}
+  .setup-banner.hidden{display:none;}
+
+  .toast{
+    position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);opacity:0;
+    background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;font-size:13px;font-weight:600;
+    transition:opacity .2s,transform .2s;pointer-events:none;z-index:20;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ★ Client IDが未設定のときだけ表示されるセットアップガイド -->
+  <div class="setup-banner" id="setup-banner">
+    <b>Google カレンダー連携の初期設定が必要です（1回だけ）</b><br>
+    1. <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a> でプロジェクトを作成<br>
+    2. 「APIとサービス」→「ライブラリ」→ <b>Google Calendar API</b> を有効化<br>
+    3. 「認証情報」→「OAuth 2.0 クライアントID」を作成（種類：<b>ウェブアプリケーション</b>）<br>
+    4. 承認済みの JavaScript 生成元に <code>http://localhost:8000</code> を追加<br>
+    5. 発行された <b>クライアントID</b> をこのファイルの <code>CLIENT_ID</code> 欄に貼り付け<br>
+    <small style="color:#7A5B00;">※ファイルをテキストエディタで開いて、script タグ内の <code>★ここに貼り付け★</code> を置き換えてください</small>
+  </div>
+
+  <header class="top">
+    <div class="title">
+      <h1>今日のタイムブロック</h1>
+      <p>朝イチのタスクを優先度順に並べて、1日の時間割に落とし込む。</p>
+    </div>
+    <div class="controls">
+      <div class="field">
+        <label for="date">日付</label>
+        <input type="date" id="date" />
+      </div>
+      <div class="field">
+        <label for="start">開始時刻</label>
+        <input type="time" id="start" value="09:00" />
+      </div>
+    </div>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <h2>タスクを追加</h2>
+      <div class="pad">
+        <div class="add">
+          <input type="text" id="t-name" placeholder="やること（例：日報の下書き）" />
+          <input type="number" id="t-mins" placeholder="分" min="5" step="5" value="30" />
+          <select id="t-prio">
+            <option value="hi">高</option>
+            <option value="mid" selected>中</option>
+            <option value="lo">低</option>
+          </select>
+          <button class="add-btn" id="add">追加する</button>
+        </div>
+
+        <div class="toolbar">
+          <button class="ghost" id="sort">優先度で並べ替え</button>
+          <span style="font-size:12px;color:var(--ink-soft);">上から順に組まれます</span>
+        </div>
+
+        <ul class="tasks" id="list"></ul>
+
+        <div class="summary">
+          <div><span class="k">合計時間</span><span class="v" id="s-total">0分</span></div>
+          <div><span class="k">終了予定</span><span class="v" id="s-end">—</span></div>
+          <div><span class="k">タスク数</span><span class="v" id="s-count">0</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1日の時間割</h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+  </div>
+
+  <footer class="actions">
+    <button class="gcal-btn" id="gcal-btn" disabled>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/>
+        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff" opacity=".85"/>
+        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#fff" opacity=".7"/>
+        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff" opacity=".7"/>
+      </svg>
+      Googleカレンダーに追加
+    </button>
+    <button class="primary" id="export">ICSでダウンロード</button>
+    <button class="danger" id="clear">この日を全消去</button>
+  </footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Google API ライブラリ -->
+<script src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+<script src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+
+<script>
+/* ============================================================
+   ★ Google Cloud Console で取得した OAuth 2.0 クライアント ID を貼り付け
+   ============================================================ */
+const CLIENT_ID = "709600758459-85auucki7v7voj16o31ldnihp60mtmlr.apps.googleusercontent.com";
+
+const GCAL_SCOPE = "https://www.googleapis.com/auth/calendar.events";
+const DISCOVERY  = "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest";
+const TZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+const GCAL_COLOR = { hi:"6", mid:"7", lo:"8" };
+
+const PRIO = {
+  hi:  { label:"高", color:"#E07A5F", rank:0 },
+  mid: { label:"中", color:"#3E8E8B", rank:1 },
+
+  lo:  { label:"低", color:"#92A0B6", rank:2 },
+};
+const PX = 1.15;
+const MIN_BLOCK = 46;
+
+let state = { date: todayStr(), start:"09:00", tasks:[] };
+let tokenClient, gapiReady=false, gisReady=false;
+
+const $ = id => document.getElementById(id);
+const elDate=$("date"), elStart=$("start"), elList=$("list"), elTimeline=$("timeline");
+
+/* ---------- Google API 初期化 ---------- */
+function gapiLoaded(){
+  gapi.load("client", async ()=>{
+    await gapi.client.init({ discoveryDocs:[DISCOVERY] });
+    gapiReady = true;
+    maybeEnableGcal();
+  });
+}
+function gisLoaded(){
+  if(CLIENT_ID === "★ここに貼り付け★") return; // 未設定なら何もしない
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: CLIENT_ID,
+    scope: GCAL_SCOPE,
+    callback: "",
+  });
+  gisReady = true;
+  maybeEnableGcal();
+}
+function maybeEnableGcal(){
+  if(gapiReady && gisReady){
+    $("gcal-btn").disabled = false;
+    $("setup-banner").classList.add("hidden");
+  }
+}
+
+async function pushToGcal(){
+  if(!state.tasks.length){ toast("タスクがありません"); return; }
+  $("gcal-btn").disabled = true;
+  $("gcal-btn").textContent = "追加中…";
+
+  try {
+    await new Promise((resolve, reject)=>{
+      tokenClient.callback = resp => resp.error ? reject(resp) : resolve(resp);
+      if(!gapi.client.getToken()){
+        tokenClient.requestAccessToken({ prompt:"consent" });
+      } else {
+        tokenClient.requestAccessToken({ prompt:"" });
+        resolve();
+      }
+    });
+
+    let cur = toMin(state.start);
+    let ok = 0;
+    for(const t of state.tasks){
+      const dtStart = `${state.date}T${fromMin(cur)}:00`;
+      const dtEnd   = `${state.date}T${fromMin(cur + t.mins)}:00`;
+      await gapi.client.calendar.events.insert({
+        calendarId: "primary",
+        resource: {
+          summary:     `${t.name}【${PRIO[t.prio].label}】`,
+          start:       { dateTime: dtStart, timeZone: TZ },
+          end:         { dateTime: dtEnd,   timeZone: TZ },
+          description: `優先度: ${PRIO[t.prio].label}　所要時間: ${fmtDur(t.mins)}`,
+          colorId:     GCAL_COLOR[t.prio],
+        },
+      });
+      ok++;
+      cur += t.mins;
+    }
+    toast(`Googleカレンダーに ${ok}件 追加しました`);
+  } catch(e) {
+    console.error(e);
+    toast("エラーが発生しました。コンソールを確認してください。");
+  } finally {
+    $("gcal-btn").disabled = false;
+    $("gcal-btn").innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/>
+      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff" opacity=".85"/>
+      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#fff" opacity=".7"/>
+      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff" opacity=".7"/>
+    </svg>Googleカレンダーに追加`;
+  }
+}
+
+/* ---------- ユーティリティ ---------- */
+function todayStr(){
+  const d=new Date(), p=n=>String(n).padStart(2,"0");
+  return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;
+}
+function uid(){ return Math.random().toString(36).slice(2,9); }
+function toMin(hhmm){ const [h,m]=hhmm.split(":").map(Number); return h*60+m; }
+function fromMin(t){ const h=Math.floor(t/60)%24, m=t%60, p=n=>String(n).padStart(2,"0"); return `${p(h)}:${p(m)}`; }
+function fmtDur(m){ if(m<60) return `${m}分`; const h=Math.floor(m/60),r=m%60; return r?`${h}時間${r}分`:`${h}時間`; }
+function escHtml(s){ return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+function toast(msg){
+  const t=$("toast");
+  t.textContent=msg; t.classList.add("show");
+  clearTimeout(t._tid); t._tid=setTimeout(()=>t.classList.remove("show"), 2600);
+}
+
+/* ---------- 永続化 ---------- */
+function save(){ localStorage.setItem("tbstate", JSON.stringify(state)); }
+function load(){
+  const raw=localStorage.getItem("tbstate");
+  if(raw) try{ Object.assign(state, JSON.parse(raw)); }catch(e){}
+}
+
+/* ---------- タスク操作 ---------- */
+function addTask(){
+  const name=$("t-name").value.trim();
+  const mins=Math.max(5, parseInt($("t-mins").value)||30);
+  const prio=$("t-prio").value;
+  if(!name){ toast("やることを入力してください"); return; }
+  state.tasks.push({ id:uid(), name, mins, prio });
+  $("t-name").value="";
+  save(); render();
+}
+function removeTask(id){ state.tasks=state.tasks.filter(t=>t.id!==id); save(); render(); }
+function moveUp(id){
+  const i=state.tasks.findIndex(t=>t.id===id);
+  if(i>0){ [state.tasks[i-1],state.tasks[i]]=[state.tasks[i],state.tasks[i-1]]; save(); render(); }
+}
+function moveDown(id){
+  const i=state.tasks.findIndex(t=>t.id===id);
+  if(i<state.tasks.length-1){ [state.tasks[i],state.tasks[i+1]]=[state.tasks[i+1],state.tasks[i]]; save(); render(); }
+}
+function sortByPrio(){
+  state.tasks.sort((a,b)=>PRIO[a.prio].rank-PRIO[b.prio].rank);
+  save(); render(); toast("優先度順に並べ替えました");
+}
+function totalMins(){ return state.tasks.reduce((s,t)=>s+t.mins, 0); }
+
+/* ---------- 描画 ---------- */
+function render(){
+  elList.innerHTML="";
+  if(!state.tasks.length){
+    elList.innerHTML=`<li class="empty">まだタスクがありません。<br><b>やることを追加してください。</b></li>`;
+  } else {
+    state.tasks.forEach(t=>{
+      const li=document.createElement("li");
+      li.className="task";
+      li.innerHTML=`
+        <span class="dot" style="background:${PRIO[t.prio].color}"></span>
+        <span class="name">${escHtml(t.name)}</span>
+        <span class="mins">${fmtDur(t.mins)}</span>
+        <span class="chip" style="background:${PRIO[t.prio].color}">${PRIO[t.prio].label}</span>
+        <button class="iconbtn" title="上へ" data-up="${t.id}">↑</button>
+        <button class="iconbtn" title="下へ" data-dn="${t.id}">↓</button>
+        <button class="iconbtn del" title="削除" data-del="${t.id}">×</button>
+      `;
+      elList.appendChild(li);
+    });
+  }
+  const tot=totalMins(), startMin=toMin(state.start);
+  $("s-total").textContent = fmtDur(tot);
+  $("s-end").textContent   = tot ? fromMin(startMin+tot) : "—";
+  $("s-count").textContent = state.tasks.length;
+  renderTimeline();
+}
+
+function renderTimeline(){
+  if(!state.tasks.length){
+    elTimeline.innerHTML=`<p class="empty">タスクを追加すると<br><b>時間割が表示されます。</b></p>`;
+    return;
+  }
+  const startMin=toMin(state.start), tot=totalMins(), paddedEnd=startMin+tot+30;
+  const trackH=Math.max((paddedEnd-startMin)*PX, 80);
+
+  let ticksHtml="";
+  for(let m=Math.ceil(startMin/30)*30; m<=paddedEnd; m+=30){
+    ticksHtml+=`<div class="tick" style="top:${(m-startMin)*PX}px">${fromMin(m)}</div>`;
+  }
+
+  let blocksHtml="", cur=startMin;
+  state.tasks.forEach(t=>{
+    const top=(cur-startMin)*PX, h=Math.max(t.mins*PX, MIN_BLOCK);
+    blocksHtml+=`<div class="block" style="top:${top}px;height:${h}px;background:${PRIO[t.prio].color}">
+      <span class="bt">${fromMin(cur)} — ${fromMin(cur+t.mins)}</span>
+      <span class="bn">${escHtml(t.name)}</span>
+    </div>`;
+    cur+=t.mins;
+  });
+
+  const now=new Date(), nowMin=now.getHours()*60+now.getMinutes();
+  const isToday=state.date===todayStr(), nowTop=(nowMin-startMin)*PX;
+  const nowHtml=(isToday && nowMin>=startMin && nowMin<=paddedEnd)
+    ? `<div class="nowline" style="top:${nowTop}px"></div>` : "";
+
+  elTimeline.innerHTML=`
+    <div class="tl-row">
+      <div class="rail" style="height:${trackH}px">${ticksHtml}</div>
+      <div class="tl-track" style="height:${trackH}px">${nowHtml}${blocksHtml}</div>
+    </div>`;
+}
+
+/* ---------- ICS エクスポート ---------- */
+function exportIcs(){
+  if(!state.tasks.length){ toast("タスクがありません"); return; }
+  const [y,mo,d]=state.date.split("-");
+  let cur=toMin(state.start);
+  const lines=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//TimeBlock//JA","CALSCALE:GREGORIAN"];
+  state.tasks.forEach(t=>{
+    const fmt=m=>`${y}${mo}${d}T${fromMin(m).replace(":","")}00`;
+    lines.push("BEGIN:VEVENT",`DTSTART:${fmt(cur)}`,`DTEND:${fmt(cur+t.mins)}`,
+      `SUMMARY:${t.name}【${PRIO[t.prio].label}】`,`DESCRIPTION:所要時間: ${fmtDur(t.mins)}`,"END:VEVENT");
+    cur+=t.mins;
+  });
+  lines.push("END:VCALENDAR");
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([lines.join("\r\n")],{type:"text/calendar"}));
+  a.download=`timeblock_${state.date}.ics`;
+  a.click();
+  toast(".ics をダウンロードしました");
+}
+
+/* ---------- イベントリスナー ---------- */
+$("gcal-btn").addEventListener("click", pushToGcal);
+$("add").addEventListener("click", addTask);
+$("t-name").addEventListener("keydown", e=>{ if(e.key==="Enter") addTask(); });
+$("sort").addEventListener("click", sortByPrio);
+$("export").addEventListener("click", exportIcs);
+$("clear").addEventListener("click", ()=>{
+  if(!state.tasks.length){ toast("タスクがありません"); return; }
+  if(confirm("この日のタスクをすべて削除しますか？")){ state.tasks=[]; save(); render(); toast("全消去しました"); }
+});
+$("date").addEventListener("change",  e=>{ state.date=e.target.value;  save(); render(); });
+$("start").addEventListener("change", e=>{ state.start=e.target.value; save(); render(); });
+elList.addEventListener("click", e=>{
+  const {up,dn,del}=e.target.dataset;
+  if(up) moveUp(up); else if(dn) moveDown(dn); else if(del) removeTask(del);
+});
+
+/* ---------- 初期化 ---------- */
+load();
+if(!state.date) state.date=todayStr();
+elDate.value=state.date;
+elStart.value=state.start;
+render();
+setInterval(()=>{ if(state.tasks.length) renderTimeline(); }, 60000);
+</script>
+</body>
+</html>

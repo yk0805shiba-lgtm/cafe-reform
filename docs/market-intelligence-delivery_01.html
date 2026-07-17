@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Market Intelligence - [DEMO] デリバリー専門混ぜそば（新宿）</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background: #f5f5f5; color: #333; }
+  .header { background: #1a1a2e; color: #fff; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .header h1 { font-size: 18px; }
+  .header .meta { font-size: 12px; opacity: 0.7; }
+  .demo-banner { background: #ff6b35; color: #fff; text-align: center; padding: 8px; font-size: 13px; font-weight: bold; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+  .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .card { background: #fff; border-radius: 8px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+  .card .num { font-size: 32px; font-weight: bold; color: #1a1a2e; }
+  .card .label { font-size: 12px; color: #666; margin-top: 4px; }
+  .card.alert { border-left: 4px solid #e74c3c; }
+  .card.warn { border-left: 4px solid #f39c12; }
+  .card.ok { border-left: 4px solid #27ae60; }
+  .section { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+  .section h2 { font-size: 16px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #1a1a2e; }
+  .event-item { border-left: 4px solid #3498db; padding: 12px 16px; margin-bottom: 12px; background: #f8f9fa; border-radius: 0 6px 6px 0; }
+  .event-item.high { border-color: #e74c3c; }
+  .event-item.medium { border-color: #f39c12; }
+  .event-item .event-title { font-weight: bold; margin-bottom: 4px; }
+  .event-item .event-meta { font-size: 12px; color: #666; margin-bottom: 8px; }
+  .rec-item { padding: 10px 14px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #e0e0e0; }
+  .rec-item.cafe { background: #e8f5e9; border-color: #4caf50; }
+  .rec-item.delivery { background: #fff3e0; border-color: #ff9800; }
+  .rec-item .rec-title { font-weight: bold; font-size: 14px; }
+  .rec-item .rec-summary { font-size: 12px; color: #555; margin-top: 4px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; margin-right: 4px; }
+  .badge.high { background: #e74c3c; color: #fff; }
+  .badge.medium { background: #f39c12; color: #fff; }
+  .badge.low { background: #95a5a6; color: #fff; }
+  .badge.cafe { background: #27ae60; color: #fff; }
+  .badge.delivery { background: #e67e22; color: #fff; }
+  .badge.draft { background: #3498db; color: #fff; }
+  .score-bar { display: inline-block; width: 80px; height: 8px; background: #e0e0e0; border-radius: 4px; vertical-align: middle; margin-left: 8px; }
+  .score-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #27ae60, #f39c12, #e74c3c); }
+  .diff-item { padding: 10px; margin-bottom: 8px; background: #fff9f0; border-radius: 6px; border: 1px solid #f39c12; }
+  .diff-item.high { background: #fff0f0; border-color: #e74c3c; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #e0e0e0; font-size: 13px; }
+  th { background: #f5f5f5; font-weight: bold; }
+  .status-ok { color: #27ae60; }
+  .status-err { color: #e74c3c; }
+  .tabs { display: flex; gap: 4px; margin-bottom: 20px; }
+  .tab-btn { padding: 8px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; background: #e0e0e0; color: #333; }
+  .tab-btn.active { background: #1a1a2e; color: #fff; }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .approve-btn { background: #27ae60; color: #fff; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; margin-right: 4px; }
+  .reject-btn { background: #e74c3c; color: #fff; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📊 Local Market Intelligence</h1>
+  <div class="meta">[DEMO] デリバリー専門混ぜそば（新宿） | delivery | 2026/07/14 15:06 生成</div>
+</div>
+<div class="demo-banner">⚠ このレポートはDEMOデータです。実在する店舗・競合ではありません。</div>
+<div class="container">
+
+  <!-- ダッシュボード -->
+  <div class="dashboard">
+    <div class="card alert">
+      <div class="num">2</div>
+      <div class="label">直近7日の重要イベント</div>
+    </div>
+    <div class="card warn">
+      <div class="num">5</div>
+      <div class="label">未承認の提案</div>
+    </div>
+    <div class="card ok">
+      <div class="num">0</div>
+      <div class="label">競合の重要変化</div>
+    </div>
+    <div class="card ok">
+      <div class="num">3</div>
+      <div class="label">監視中の競合</div>
+    </div>
+    <div class="card ok">
+      <div class="num">0</div>
+      <div class="label">緊急対応が必要な提案</div>
+    </div>
+  </div>
+
+  <!-- タブ -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('calendar')">📅 販促カレンダー</button>
+    <button class="tab-btn" onclick="showTab('competitor')">🔍 競合モニタリング</button>
+    <button class="tab-btn" onclick="showTab('recommendations')">💡 提案管理</button>
+    <button class="tab-btn" onclick="showTab('status')">⚙ Agent状態</button>
+  </div>
+
+  <!-- タブ: 販促カレンダー -->
+  <div id="tab-calendar" class="tab-content active">
+    <div class="section">
+      <h2>📅 販促カレンダー（30日間）</h2>
+      
+<div class="event-item medium">
+  <div class="event-title">[DEMO] 猛暑日（最高気温35度予報）</div>
+  <div class="event-meta">
+    2026/07/17 15:06 ～ 2026/07/17 15:06 |
+    2日後 |  | 距離不明 | 規模:unknown
+    <span class="score-bar"><span class="score-fill" style="width:69%"></span></span>
+    スコア 69/100
+  </div>
+  
+  <p style="font-size:12px;color:#aaa;margin-top:8px">提案なし（スコアが低いため）</p>
+</div>
+
+<div class="event-item medium">
+  <div class="event-title">[DEMO] 雨天予報（終日雨）</div>
+  <div class="event-meta">
+    2026/07/21 15:06 ～ 2026/07/21 15:06 |
+    6日後 |  | 距離不明 | 規模:unknown
+    <span class="score-bar"><span class="score-fill" style="width:67%"></span></span>
+    スコア 67/100
+  </div>
+  
+  <div class="rec-item delivery" style="margin-top:8px"><span class="badge delivery">delivery</span><span class="badge medium">medium</span> <span class="rec-title">雨天デリバリー需要の活用</span><div class="rec-summary">雨天は外出を避ける人が増えデリバリー注文が増加する可能性がある。仕込みを通常の1.2倍にし、SNSで告知する。</div></div>
+</div>
+
+<div class="event-item medium">
+  <div class="event-title">[DEMO] 夏の大花火大会</div>
+  <div class="event-meta">
+    2026/07/28 15:06 ～ 2026/07/28 15:06 |
+    13日後 | 河川敷公園 | 1.8km | 規模:large
+    <span class="score-bar"><span class="score-fill" style="width:67%"></span></span>
+    スコア 67/100
+  </div>
+  
+  <div class="rec-item delivery" style="margin-top:8px"><span class="badge delivery">delivery</span><span class="badge medium">medium</span> <span class="rec-title">イベント終了後のセット提案</span><div class="rec-summary">「夏の大花火大会」終了後（20:30〜21:00以降）の注文増加に備えて、帰宅後需要向けセット（混ぜそば＋追い飯または温玉）を用意する。</div></div><div class="rec-item delivery" style="margin-top:8px"><span class="badge delivery">delivery</span><span class="badge medium">medium</span> <span class="rec-title">ピーク時間の調理体制確認</span><div class="rec-summary">終了後のピーク時間帯に調理負荷が集中するため、仕込み量を確認し、対応可能な商品数を事前に絞る基準を設ける。</div></div>
+</div>
+
+<div class="event-item medium">
+  <div class="event-title">[DEMO] 大型音楽ライブイベント</div>
+  <div class="event-meta">
+    2026/08/04 15:06 ～ 2026/08/04 15:06 |
+    20日後 | 近隣ライブホール | 0.9km | 規模:medium
+    <span class="score-bar"><span class="score-fill" style="width:61%"></span></span>
+    スコア 61/100
+  </div>
+  
+  <div class="rec-item delivery" style="margin-top:8px"><span class="badge delivery">delivery</span><span class="badge low">low</span> <span class="rec-title">ボリュームセットでの差別化</span><div class="rec-summary">「大型音楽ライブイベント」の観客向けに、ボリューム訴求セット（大盛り・追い飯・トッピング自由）をデリバリーアプリで目立たせる。</div></div>
+</div>
+
+<div class="event-item medium">
+  <div class="event-title">[DEMO] 外国人観光客向け文化体験フェスタ</div>
+  <div class="event-meta">
+    2026/08/13 15:06 ～ 2026/08/15 15:06 |
+    29日後 | 観光センター | 2.1km | 規模:medium
+    <span class="score-bar"><span class="score-fill" style="width:47%"></span></span>
+    スコア 47/100
+  </div>
+  
+  <div class="rec-item delivery" style="margin-top:8px"><span class="badge delivery">delivery</span><span class="badge low">low</span> <span class="rec-title">デリバリー需要の事前確認</span><div class="rec-summary">「外国人観光客向け文化体験フェスタ」が配達エリア内の顧客に影響する場合、デリバリーアプリでの露出強化を検討する。</div></div>
+</div>
+    </div>
+  </div>
+
+  <!-- タブ: 競合モニタリング -->
+  <div id="tab-competitor" class="tab-content">
+    <div class="section">
+      <h2>🔍 競合モニタリング</h2>
+      
+<div class="diff-item ">
+  <strong>[delivery] [DEMO] 競合混ぜそばA</strong> 
+  <span style="font-size:12px;color:#666"> | 監視: 有効 | 距離: 0.8km</span>
+  <div style="font-size:12px;margin-top:4px;color:#555">前回との差分なし</div>
+</div>
+
+<div class="diff-item ">
+  <strong>[delivery] [DEMO] 競合混ぜそばB</strong> 
+  <span style="font-size:12px;color:#666"> | 監視: 有効 | 距離: 1.2km</span>
+  <div style="font-size:12px;margin-top:4px;color:#555">前回との差分なし</div>
+</div>
+
+<div class="diff-item ">
+  <strong>[delivery] [DEMO] 競合混ぜそばC</strong> 
+  <span style="font-size:12px;color:#666"> | 監視: 有効 | 距離: 1.5km</span>
+  <div style="font-size:12px;margin-top:4px;color:#555">前回との差分なし</div>
+</div>
+    </div>
+  </div>
+
+  <!-- タブ: 提案管理 -->
+  <div id="tab-recommendations" class="tab-content">
+    <div class="section">
+      <h2>💡 提案一覧</h2>
+      <p style="font-size:12px;color:#666;margin-bottom:12px;">
+        承認後も外部投稿・価格変更は自動実行されません。手動で対応してください。<br>
+        CLIで承認: <code>python3 cli.py recommend approve --id &lt;id&gt;</code>
+      </p>
+      
+<div class="rec-item delivery">
+  <div>
+    <span class="badge delivery">delivery</span>
+    <span class="badge medium">medium</span>
+    <span class="badge draft">draft</span>
+    <span class="rec-title">イベント終了後のセット提案</span>
+  </div>
+  <div class="rec-summary">「夏の大花火大会」終了後（20:30〜21:00以降）の注文増加に備えて、帰宅後需要向けセット（混ぜそば＋追い飯または温玉）を用意する。</div>
+  <div style="font-size:11px;color:#999;margin-top:4px">ID: rec_7c543464 | 2026-07-14</div>
+  <div style="margin-top:6px">
+    <code style="font-size:11px">python3 cli.py recommend approve --id rec_7c543464</code>
+  </div>
+</div>
+
+<div class="rec-item delivery">
+  <div>
+    <span class="badge delivery">delivery</span>
+    <span class="badge medium">medium</span>
+    <span class="badge draft">draft</span>
+    <span class="rec-title">ピーク時間の調理体制確認</span>
+  </div>
+  <div class="rec-summary">終了後のピーク時間帯に調理負荷が集中するため、仕込み量を確認し、対応可能な商品数を事前に絞る基準を設ける。</div>
+  <div style="font-size:11px;color:#999;margin-top:4px">ID: rec_28d9d623 | 2026-07-14</div>
+  <div style="margin-top:6px">
+    <code style="font-size:11px">python3 cli.py recommend approve --id rec_28d9d623</code>
+  </div>
+</div>
+
+<div class="rec-item delivery">
+  <div>
+    <span class="badge delivery">delivery</span>
+    <span class="badge medium">medium</span>
+    <span class="badge draft">draft</span>
+    <span class="rec-title">雨天デリバリー需要の活用</span>
+  </div>
+  <div class="rec-summary">雨天は外出を避ける人が増えデリバリー注文が増加する可能性がある。仕込みを通常の1.2倍にし、SNSで告知する。</div>
+  <div style="font-size:11px;color:#999;margin-top:4px">ID: rec_389b3fbd | 2026-07-14</div>
+  <div style="margin-top:6px">
+    <code style="font-size:11px">python3 cli.py recommend approve --id rec_389b3fbd</code>
+  </div>
+</div>
+
+<div class="rec-item delivery">
+  <div>
+    <span class="badge delivery">delivery</span>
+    <span class="badge low">low</span>
+    <span class="badge draft">draft</span>
+    <span class="rec-title">ボリュームセットでの差別化</span>
+  </div>
+  <div class="rec-summary">「大型音楽ライブイベント」の観客向けに、ボリューム訴求セット（大盛り・追い飯・トッピング自由）をデリバリーアプリで目立たせる。</div>
+  <div style="font-size:11px;color:#999;margin-top:4px">ID: rec_86a445e2 | 2026-07-14</div>
+  <div style="margin-top:6px">
+    <code style="font-size:11px">python3 cli.py recommend approve --id rec_86a445e2</code>
+  </div>
+</div>
+
+<div class="rec-item delivery">
+  <div>
+    <span class="badge delivery">delivery</span>
+    <span class="badge low">low</span>
+    <span class="badge draft">draft</span>
+    <span class="rec-title">デリバリー需要の事前確認</span>
+  </div>
+  <div class="rec-summary">「外国人観光客向け文化体験フェスタ」が配達エリア内の顧客に影響する場合、デリバリーアプリでの露出強化を検討する。</div>
+  <div style="font-size:11px;color:#999;margin-top:4px">ID: rec_03873017 | 2026-07-14</div>
+  <div style="margin-top:6px">
+    <code style="font-size:11px">python3 cli.py recommend approve --id rec_03873017</code>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <!-- タブ: Agent状態 -->
+  <div id="tab-status" class="tab-content">
+    <div class="section">
+      <h2>⚙ Agent実行状態</h2>
+      
+<table>
+<tr><th>Agent</th><th>店舗</th><th>状態</th><th>実行日時</th><th>エラー</th></tr>
+<tr><td>competitor_monitoring</td><td>delivery_01</td><td class='status-ok'>success</td><td>2026-07-14T15:06</td><td>-</td></tr><tr><td>competitor_monitoring</td><td>cafe_01</td><td class='status-ok'>success</td><td>2026-07-14T15:06</td><td>-</td></tr><tr><td>local_event_promotion</td><td>delivery_01</td><td class='status-ok'>success</td><td>2026-07-14T15:06</td><td>-</td></tr><tr><td>local_event_promotion</td><td>cafe_01</td><td class='status-ok'>success</td><td>2026-07-14T15:06</td><td>-</td></tr>
+</table>
+<p style="font-size:12px;color:#666;margin-top:12px">
+  手動実行: <code>python3 cli.py event run --store &lt;id&gt;</code><br>
+  定期実行設定: <code>market-intelligence/scheduler/cron_setup.sh</code>
+</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showTab(name) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>

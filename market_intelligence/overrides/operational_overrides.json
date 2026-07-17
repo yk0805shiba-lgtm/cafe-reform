@@ -1,0 +1,49 @@
+{
+  "collection_mode": "shadow",
+  "event_visibility_overrides": [
+    {
+      "event_uid": "evt_001@test",
+      "suppressed_at": "2026-07-17T12:02:12.968530+09:00",
+      "suppressed_by": "cli",
+      "suppression_reason_code": "",
+      "visibility": "hidden"
+    },
+    {
+      "event_uid": "evt_cancelled@test",
+      "suppressed_at": "2026-07-17T12:02:12.974105+09:00",
+      "suppressed_by": "cli",
+      "suppression_reason_code": "",
+      "visibility": "hidden"
+    }
+  ],
+  "schema_version": 2,
+  "source_overrides": [
+    {
+      "enabled": false,
+      "pause_reason_code": "",
+      "paused_at": "2026-07-17T12:02:12.938941+09:00",
+      "paused_by": "cli",
+      "planned_resume_at": null,
+      "source_key": "Doorkeeper新宿",
+      "store_id": "cafe_01"
+    },
+    {
+      "enabled": false,
+      "pause_reason_code": "",
+      "paused_at": "2026-07-17T12:02:12.934485+09:00",
+      "paused_by": "cli",
+      "planned_resume_at": null,
+      "source_key": "Doorkeeper新宿",
+      "store_id": "all"
+    },
+    {
+      "enabled": false,
+      "pause_reason_code": "",
+      "paused_at": "2026-07-17T12:02:12.946273+09:00",
+      "paused_by": "cli",
+      "planned_resume_at": null,
+      "source_key": "観光協会",
+      "store_id": "cafe_01"
+    }
+  ]
+}

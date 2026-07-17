@@ -1,0 +1,33 @@
+# 秘密情報・環境変数
+.env
+*.env
+.env.*
+
+# 実行時データ（JSONストレージ）
+market_intelligence/data/
+
+# NOTE: market_intelligence/overrides/ と state/ はgit管理対象
+# (operational_overrides.json と canonical_events.json はActions runs間で状態を引き継ぐ)
+
+# レポート出力（docs/へコピーされるものは除く）
+market_intelligence/reports_output/
+
+# ログ
+market_intelligence/logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+
+# 業務日誌・内部メモ
+logs/
+
+# 別リポジトリ（ネストしたgitリポジトリ）
+tiktok-videos/

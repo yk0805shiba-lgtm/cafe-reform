@@ -1,0 +1,4 @@
+anthropic>=0.116.0
+icalendar>=7.0.0
+requests>=2.32.0
+pytest>=9.0.0

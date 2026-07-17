@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>新宿エリア イベントカレンダー（Market Intelligence）</title>
+  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #333;
+      line-height: 1.7;
+    }
+    h1 { font-size: 1.5rem; border-bottom: 2px solid #ccc; padding-bottom: 8px; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    .notice {
+      background: #fff8e1;
+      border-left: 4px solid #f9a825;
+      padding: 12px 16px;
+      margin: 16px 0;
+      border-radius: 2px;
+    }
+    ul { padding-left: 1.4em; }
+    li { margin: 6px 0; }
+    a { color: #1565c0; }
+    .ics-list { list-style: none; padding: 0; }
+    .ics-list li {
+      margin: 8px 0;
+      padding: 10px 14px;
+      background: #f5f5f5;
+      border-radius: 4px;
+    }
+    .ics-list a { font-weight: bold; }
+    .label {
+      display: inline-block;
+      font-size: 0.8em;
+      color: #555;
+      margin-left: 8px;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85em;
+      color: #777;
+      border-top: 1px solid #eee;
+      padding-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>新宿エリア イベントカレンダー（Market Intelligence）</h1>
+
+  <div class="notice">
+    <strong>公開アクセスについての注意:</strong><br>
+    このページは公開されています。個人情報・秘密情報は含まれていません。<br>
+    掲載されているのは外部の公開イベント情報のみです。店舗名・スタッフ個人名・売上データ等の内部情報は一切含まれません。
+  </div>
+
+  <h2>ICS ファイル一覧（カレンダー購読用）</h2>
+  <ul class="ics-list">
+    <li>
+      <a href="market-intelligence/events/all.ics">all.ics</a>
+      <span class="label">全イベント</span>
+    </li>
+    <li>
+      <a href="market-intelligence/events/cafe.ics">cafe.ics</a>
+      <span class="label">カフェ営業向けイベント</span>
+    </li>
+    <li>
+      <a href="market-intelligence/events/delivery.ics">delivery.ics</a>
+      <span class="label">デリバリー向けイベント</span>
+    </li>
+    <li>
+      <a href="market-intelligence/events/cafe_01_cafe.ics">cafe_01_cafe.ics</a>
+      <span class="label">店舗 cafe_01（カフェ）</span>
+    </li>
+    <li>
+      <a href="market-intelligence/events/delivery_01_delivery.ics">delivery_01_delivery.ics</a>
+      <span class="label">店舗 delivery_01（デリバリー）</span>
+    </li>
+  </ul>
+
+  <h2>Google カレンダーへの追加方法</h2>
+  <ol>
+    <li><a href="https://calendar.google.com" target="_blank" rel="noopener">Google カレンダー</a> を開く</li>
+    <li>左サイドバーの「他のカレンダー」横の「+」→「URL で追加」をクリック</li>
+    <li>上記 ICS ファイルの URL を貼り付けて「カレンダーを追加」</li>
+  </ol>
+  <p>
+    ICS の購読 URL は GitHub Pages を有効化した後、以下の形式になります（<code>YOUR_GITHUB_USERNAME</code> を書き換えてください）:
+  </p>
+  <ul>
+    <li>HTTPS: <code>https://YOUR_GITHUB_USERNAME.github.io/cafe-reform/market-intelligence/events/all.ics</code></li>
+    <li>webcal: <code>webcal://YOUR_GITHUB_USERNAME.github.io/cafe-reform/market-intelligence/events/all.ics</code></li>
+  </ul>
+
+  <h2>Apple カレンダーへの追加方法</h2>
+  <ol>
+    <li>Apple カレンダーアプリを開き、「ファイル」→「新規カレンダーの購読」を選択</li>
+    <li>上記 ICS ファイルの URL を入力</li>
+    <li>更新頻度は「毎日」を推奨</li>
+  </ol>
+
+  <footer>
+    最終更新: <span id="last-modified"></span>
+    <script>
+      document.getElementById("last-modified").textContent = document.lastModified;
+    </script>
+  </footer>
+
+</body>
+</html>

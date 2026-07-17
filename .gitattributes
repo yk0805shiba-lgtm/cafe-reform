@@ -1,0 +1,16 @@
+# ICS files use CRLF per RFC 5545 but we normalize to LF in git
+*.ics text eol=lf
+
+# HTML and markdown as text
+*.html text eol=lf
+*.md text eol=lf
+
+# Python
+*.py text eol=lf
+
+# JSON
+*.json text eol=lf
+
+# YAML
+*.yml text eol=lf
+*.yaml text eol=lf

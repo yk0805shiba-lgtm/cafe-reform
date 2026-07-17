@@ -1,0 +1,212 @@
+name: Update Market Intelligence Events
+
+on:
+  schedule:
+    # 21:00 UTC = 翌朝 06:00 JST
+    - cron: "0 21 * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: |
+          収集モード。
+          'configured' = operational_overrides.json の値を使用（推奨）。
+          それ以外は今回のみ明示指定（ファイルは更新しない）。
+        required: false
+        default: "configured"
+        type: choice
+        options:
+          - configured
+          - shadow
+          - active
+          - manual-only
+
+# Pages 用の同時実行制御（競合防止）
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # ICS / snapshot / overrides を git commit するため
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────
+  # Job 1: 収集 → ICS生成 → 検証 → commit → Pages artifact upload
+  # ─────────────────────────────────────────────────────────────────────────
+  collect-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
+    env:
+      GEOCODING_PROVIDER: nominatim
+      LOCAL_INTELLIGENCE_ENABLED: "true"
+      LOCAL_EVENT_AGENT_ENABLED: "true"
+      LOCAL_INTELLIGENCE_DEMO_MODE: "false"
+      LOCAL_EVENT_LOOKAHEAD_DAYS: "90"
+      LOCAL_EVENT_DEFAULT_RADIUS_KM: "5"
+      MARKET_INTELLIGENCE_CONTACT: "${{ github.server_url }}/${{ github.repository }}/issues"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: market_intelligence/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r market_intelligence/requirements.txt
+
+      # ── StoreProfile 準備 ──────────────────────────────────────────────
+      - name: Prepare StoreProfile config
+        env:
+          STORE_PROFILES_JSON: ${{ secrets.STORE_PROFILES_JSON }}
+        run: |
+          mkdir -p market_intelligence/data
+          if [ -n "$STORE_PROFILES_JSON" ]; then
+            echo "$STORE_PROFILES_JSON" > market_intelligence/data/store_profiles.json
+            echo "store_profiles.json を Secret から注入しました"
+          else
+            echo "STORE_PROFILES_JSON が未設定のため、デモプロファイルを生成します"
+            python3 market_intelligence/cli.py events config create-demo \
+              --output market_intelligence/data/store_profiles.json
+          fi
+
+      - name: Validate StoreProfile config
+        run: |
+          python3 market_intelligence/cli.py events config validate \
+            --file market_intelligence/data/store_profiles.json
+
+      # ── 収集・同期 ────────────────────────────────────────────────────
+      # operational_overrides.json の collection_mode を使用。
+      # workflow_dispatch で mode が指定された場合はその値を優先（ファイルは更新しない）。
+      # 全 auto source 失敗 かつ canonical snapshot なし → exit code 1 でジョブ失敗。
+      - name: Collect and sync events
+        run: |
+          SYNC_MODE="${{ github.event.inputs.mode || 'configured' }}"
+          echo "収集モード: ${SYNC_MODE}"
+          python3 market_intelligence/cli.py events sync \
+            --mode "${SYNC_MODE}" \
+            --no-llm
+
+      # ── ICS 生成・検証 ───────────────────────────────────────────────
+      - name: Build ICS files
+        run: python3 market_intelligence/cli.py events build --no-llm
+
+      - name: Validate ICS files
+        run: |
+          python3 -c "
+          import sys, pathlib
+          from icalendar import Calendar
+
+          ics_dir = pathlib.Path('docs/market-intelligence/events')
+          if not ics_dir.exists():
+              print('[WARNING] docs/market-intelligence/events が存在しません', file=sys.stderr)
+              sys.exit(0)
+
+          errors = []
+          for ics_path in sorted(ics_dir.glob('*.ics')):
+              try:
+                  cal = Calendar.from_ical(ics_path.read_bytes())
+              except Exception as e:
+                  errors.append(f'{ics_path.name}: パースエラー: {e}')
+                  continue
+
+              if cal.name != 'VCALENDAR':
+                  errors.append(f'{ics_path.name}: VCALENDAR コンポーネントが見つかりません')
+                  continue
+
+              vevents = [c for c in cal.walk() if c.name == 'VEVENT']
+              if len(vevents) == 0:
+                  print(f'[WARNING] {ics_path.name}: VEVENT が 0 件（イベントなし）', file=sys.stderr)
+
+              seen_uids = set()
+              for e in vevents:
+                  uid = str(e.get('UID', ''))
+                  if uid in seen_uids:
+                      errors.append(f'{ics_path.name}: UID 重複: {uid}')
+                  seen_uids.add(uid)
+                  if not e.get('DTSTART'):
+                      errors.append(f\"{ics_path.name}: DTSTART なし UID={e.get('UID', '?')}\")
+
+              print(f'[OK] {ics_path.name}: {len(vevents)} VEVENT')
+
+          if errors:
+              print('\\n[VALIDATION ERRORS]', file=sys.stderr)
+              for err in errors:
+                  print(f'  - {err}', file=sys.stderr)
+              sys.exit(1)
+          else:
+              print('ICS validation passed.')
+          "
+
+      - name: Validate canonical snapshot
+        run: |
+          python3 -c "
+          import sys, json, pathlib
+          snap = pathlib.Path('state/canonical_events.json')
+          if not snap.exists():
+              # snapshot が存在しない = 初回実行 or 全 source 失敗で skip
+              print('canonical_events.json が存在しません（初回実行の可能性）')
+              sys.exit(0)
+          data = json.loads(snap.read_text())
+          if not isinstance(data, list):
+              print('[ERROR] canonical_events.json のトップレベルが list ではありません', file=sys.stderr)
+              sys.exit(1)
+          print(f'canonical_events.json: {len(data)} 件 - OK')
+          "
+
+      # ── commit（差分があれば）────────────────────────────────────────
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/market-intelligence/ || true
+          git add state/canonical_events.json || true
+          git add market_intelligence/overrides/operational_overrides.json || true
+          if git diff --quiet --cached; then
+            echo "変更はありません。コミットをスキップします。"
+          else
+            git commit -m "chore: update market intelligence events [skip ci]"
+            git push
+          fi
+
+      # ── GitHub Pages artifact ─────────────────────────────────────────
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # docs/ をアーティファクトルートとして公開
+          # → https://<OWNER>.github.io/cafe-reform/market-intelligence/events/all.ics
+          path: docs
+
+  # ─────────────────────────────────────────────────────────────────────────
+  # Job 2: GitHub Pages へ deploy
+  # ─────────────────────────────────────────────────────────────────────────
+  deploy:
+    needs: collect-and-build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
