@@ -1,5 +1,5 @@
 {
-  "collection_mode": "shadow",
+  "collection_mode": "active",
   "event_visibility_overrides": [],
   "schema_version": 2,
   "source_overrides": [
