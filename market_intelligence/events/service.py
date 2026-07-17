@@ -3,6 +3,7 @@
 外部サイトへアクセスしない。
 """
 from __future__ import annotations
+import json
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -40,6 +41,17 @@ def build_feeds(
 
     # 全EventRecordを読む
     all_events = store.list_all("event_records")
+
+    # shadow mode 等で event_records が空の場合、canonical_events.json をフォールバックとして使う
+    if not all_events:
+        canonical_path = Path(__file__).resolve().parents[2] / "state" / "canonical_events.json"
+        if canonical_path.exists():
+            try:
+                all_events = json.loads(canonical_path.read_text(encoding="utf-8"))
+                print(f"[events build] canonical_events.json からフォールバック: {len(all_events)} 件")
+            except Exception:
+                pass
+
     # 全StoreEventAssessmentを読む
     all_assessments = store.list_all("store_event_assessments")
 

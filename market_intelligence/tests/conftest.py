@@ -28,6 +28,15 @@ def fresh_store(tmp_path):
     cfg.DATA_DIR = old_dir
 
 
+@pytest.fixture(autouse=True)
+def isolate_operational_overrides(tmp_path, monkeypatch):
+    """テストが実際の operational_overrides.json を汚染しないようにする"""
+    import market_intelligence.overrides.operational_overrides as oo_mod
+    tmp_overrides = tmp_path / "operational_overrides.json"
+    monkeypatch.setattr(oo_mod, "DEFAULT_OVERRIDES_PATH", tmp_overrides)
+    yield
+
+
 @pytest.fixture
 def store(fresh_store):
     from market_intelligence.storage import JsonStore
