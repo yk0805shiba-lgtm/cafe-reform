@@ -40,29 +40,6 @@
     "venue_name": "新宿文化センター 大ホール"
   },
   {
-    "address": "東京都新宿区下落合３丁目１７−４２ 目白ファッション＆アートカレッジ 1号館 207号",
-    "all_day": false,
-    "category": "community",
-    "confidence": 0.95,
-    "content_hash": "115c63bc9dfe59f1",
-    "description": "ロブロックスは、遊ぶだけじゃない。\n世界中で人気のゲーム「Roblox（ロブロックス）」は、\n実は “遊ぶ側” から “つくる側” になれる プラットフォームです。\n\nこのワークショップでは、\nゲームで遊ぶだけでは身につかない\n\n考える力\n\n創造する力\n\n試して直す力\n\nを、実際に手を動かしながら体験してもらいます。\n\nワークショップ内容\nStep1｜モノを出してみよう\n\n床・壁・敵・アイテムなどを自由に配置。\n回したり、大きくしたり、小さくしたり…\nまずは「作るって楽しい！」を体験します。\n\nStep2｜組み合わせてみよう\n\n作ったパーツを組み合わせて\n簡単なアスレチックやミニゲームを制作。\n\n「こうしたら面白いかも？」を形にしていきます。\n\nStep3｜ゲームを考えよう\n\n・どうなったらクリア？\n・勝つと何がうれしい？\n・どんな世界観にする？\n\nゲームの“ルール作り”をみんなで考えます。\n\nStep4｜オリジナルゲームを完成させよう\n\n考えたアイデアをもとに、1人1作品を制作。\n最後はみんなで遊んで発表します！\n\nこのワークショップで身につくこと\n\n創造力・発想力\n\n論理的に考える",
-    "ends_at": "2026-07-19T14:00:00+09:00",
-    "expected_audience": 0,
-    "external_id": "198109",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.7217034,
-    "longitude": 139.703752,
-    "official_url": "https://8x9lab.doorkeeper.jp/events/198109",
-    "source_id": "Doorkeeper新宿",
-    "starts_at": "2026-07-19T12:30:00+09:00",
-    "status": "confirmed",
-    "title": "【目白・7/19】Robloxでゲームをつくろう【PC貸出◯】",
-    "uid": "8aa17eccd5a56733@market-intelligence",
-    "venue_name": "ハック 東京校"
-  },
-  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
@@ -101,28 +78,6 @@
     "title": "【共催】リアル恐竜ショー 恐竜パーク",
     "uid": "6f737b71f1e4e037@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
-  },
-  {
-    "address": "東京都新宿区新宿3丁目",
-    "all_day": false,
-    "category": "festival",
-    "confidence": 1.0,
-    "content_hash": "9745a447a4e0b328",
-    "description": "これはテスト用のデモイベントです。実在するイベントではありません。",
-    "ends_at": "2026-07-23T17:00:00+09:00",
-    "expected_audience": 3000,
-    "languages": [
-      "ja",
-      "en"
-    ],
-    "latitude": 35.6852,
-    "longitude": 139.71,
-    "source_id": "demo",
-    "starts_at": "2026-07-23T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "DEMO 新宿御苑周辺テストイベント",
-    "uid": "a857b370363b248c@market-intelligence",
-    "venue_name": "DEMO会場（新宿御苑前）"
   },
   {
     "address": "東京都新宿区",
@@ -181,50 +136,6 @@
     "venue_name": "新宿文化センター 大ホール"
   },
   {
-    "address": "〒151-0053 東京都渋谷区代々木3-22-7 新宿文化クイントビル 9F",
-    "all_day": false,
-    "category": "community",
-    "confidence": 0.95,
-    "content_hash": "6d1b09a914e6e916",
-    "description": "こんにちは、こんばんは、TOCfE Bootcampです。\n\n・選択候補が複数あると、悩んでしまい決まらない\n・意見が平行線で終わりが見えない\n・Win-Winと良く聞くけど、どうなったらWin-Winなのかわからない\nこのような場面、職場や家庭などで出会った事はありませんか？\n\n・納得のいく選択ができるようになる\n・平行線の対立構造を正確に把握して解消への糸口が見つかる\n・なにがWin-Winなのかを正確に捉えられるようになる\nを目指してガッツリトレーニングしてみませんか。\n\n\"クラウド\"は、対立部分と対立の背景をはっきりさせ、隠れた要望を整理し対立を解消するための思考ツールです。\n「実はこういう背景があって」というものをはじめからハッキリとさせることが出来れば、物事を進めるのが今よりも楽になりそうな気がしませんか？\n過程において、本心や隠れていたものを明確になることがあります。それ明らかにし腹を割りWin-Winを目指すツールになっています。\n\nTOCfE BootCampってなに？\n\nBootcamp(ブートキャンプ)は新兵訓練という意味です。\n右も左もわからないヒヨコさんを、生",
-    "ends_at": "2026-07-26T18:30:00+09:00",
-    "expected_audience": 7,
-    "external_id": "196973",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://tocfebc.doorkeeper.jp/events/196973",
-    "source_id": "Doorkeeper新宿",
-    "starts_at": "2026-07-26T09:30:00+09:00",
-    "status": "confirmed",
-    "title": "【ロジカルシンキングの初歩】クラウド ～ I believe what you desired ～",
-    "uid": "9ca63bbf07266b1a@market-intelligence",
-    "venue_name": "株式会社SHIFT 新宿第１オフィス"
-  },
-  {
-    "address": "〒161-0033 東京都新宿区下落合３丁目１７−４２ 目白ファッション＆アートカレッジ 1号館 MB1階",
-    "all_day": false,
-    "category": "community",
-    "confidence": 0.95,
-    "content_hash": "a30b5373d000ff66",
-    "description": "◇今回のイベント\n\n今度はRPGサーバはそのまま\nミニゲームをいくつか行います\n・ビンゴゲーム\nクリエイティブ\n　コマンドできる子には、OP権限を解放します。自由にコマンドブロックをつかってクリエイティブできます\n\n◇マインクラフトデイとは\n\nマインクラフトデイとは、8x9を含め様々なプログラミングスクールで行われている取り組みで、\nスクールに通う生徒同士の交流や保護者・講師同士の交流を目的に行っています。\n8x9では、「ハック 東京校」の講師が企画・実行し、生徒やサーバーのみに参加するこども達からの手伝いを受け、開催しています。\n\n◇マイクラデイ公式サイトのご案内\n\nマイクラデイの公式サイトができました。\nイベントでつかわれるマイクラサーバーについての情報や、\n遊ぶ上でのルール、また次回マイクラデイの日程などがわかるサイトです。\nぜひ、ブックマークにいれて定期的にみにきてください。\n\nマイクラデイ公式サイト\n\n◇参加費\n\nハック生徒：無料\n一般：　１０００円\n\n◆マインクラフトのマルチプレイ\n\n\n常設のマインクラフトデイサーバーで今回だけの特別なイベントを行います。\n操作方法がわから",
-    "ends_at": "2026-07-26T16:00:00+09:00",
-    "expected_audience": 4,
-    "external_id": "198108",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.7217055,
-    "longitude": 139.7037819,
-    "official_url": "https://minecraft-day.doorkeeper.jp/events/198108",
-    "source_id": "Doorkeeper新宿",
-    "starts_at": "2026-07-26T13:30:00+09:00",
-    "status": "confirmed",
-    "title": "【東京・目白】マイクラデイ【7/26】",
-    "uid": "fc7ae0856dcf42a9@market-intelligence",
-    "venue_name": "ハック 東京校"
-  },
-  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
@@ -263,50 +174,6 @@
     "title": "中川晃教 Live Music Studio ＃21 スペシャルライブ",
     "uid": "15f3e9be55ba7e4f@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
-  },
-  {
-    "address": "東京都新宿区新宿2丁目",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 1.0,
-    "content_hash": "c22fbaddff5d3c44",
-    "description": "これはテスト用のデモイベントです。実在するイベントではありません。",
-    "ends_at": "2026-07-30T19:00:00+09:00",
-    "expected_audience": 1500,
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.69,
-    "longitude": 139.703,
-    "source_id": "demo",
-    "starts_at": "2026-07-30T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "DEMO 新宿文化祭（テスト）",
-    "uid": "e3c73bfa4dfa4550@market-intelligence",
-    "venue_name": "DEMO文化会館（テスト）"
-  },
-  {
-    "address": "東京都新宿区高田馬場1-28-10 三慶ビル4階 CASE Shinjuku",
-    "all_day": false,
-    "category": "community",
-    "confidence": 0.95,
-    "content_hash": "815853ab6a453b85",
-    "description": "\n\n\n宮島 衣瑛: こんにちは！CoderDojo Japan の宮島です。先日、イギリスのケンブリッジで開催された Raspberry Pi 財団が主宰するAI×教育カンファレンス「Raspberry Fields」に参加してきました。\n\nCoderDojo を始め、世界中の RasPi 財団のパートナー団体の関係者が集まり、AI 以後の教育について様々な意見交換をしてきました。そこで私が学んできたことを中心に、日本のコミュニティの皆さまにもぜひ共有できればと思います。\n\n\n\n\n🌐 ラズベリーパイ財団主催の国際サミット『Raspberry Fields』参加報告会 ☯️\n\n「Raspberry Fields」は、ラズベリーパイ財団が主催する、世界各地のパートナー法人や支援財団などが一堂に集まる国際サミットです。\n\n2026年6月30日から7月2日まで英国ケンブリッジで開催され、各国から約200名が集まりました。CoderDojo Japanも公式パートナー法人の１社として招待していただき、世界中の CoderDojo コミュニティや関連財団・教育関係者などと日本国内の活動などについて",
-    "ends_at": "2026-07-31T23:00:00+09:00",
-    "expected_audience": 9,
-    "external_id": "198246",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.7120933,
-    "longitude": 139.7047394,
-    "official_url": "https://coderdojo-japan.doorkeeper.jp/events/198246",
-    "source_id": "Doorkeeper新宿",
-    "starts_at": "2026-07-31T18:30:00+09:00",
-    "status": "confirmed",
-    "title": "🌐 ラズベリーパイ財団主催の国際サミット『Raspberry Fields』参加報告会 ☯️",
-    "uid": "d01e739e6899ce8a@market-intelligence",
-    "venue_name": "CASE Shinjuku"
   },
   {
     "address": "東京都新宿区新宿6-14-1",
