@@ -4,26 +4,6 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "a226f11e4b51c9b4",
-    "ends_at": "2026-07-12T17:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-07-12T14:00:00+09:00",
-    "status": "confirmed",
-    "title": "大久保混声合唱団 第４８回定期演奏会",
-    "uid": "079a2f2b1c25f39c@market-intelligence",
-    "venue_name": "新宿文化センター 大ホール"
-  },
-  {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
     "content_hash": "c0ecb5434248a888",
     "ends_at": "2026-07-18T13:30:00+09:00",
     "languages": [
