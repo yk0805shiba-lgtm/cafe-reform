@@ -38,26 +38,6 @@
     "uid": "55026f2c7bbe626f@market-intelligence"
   },
   {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
-    "content_hash": "bc6eb5e0ede8374a",
-    "ends_at": "2026-07-20T16:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-07-20T13:00:00+09:00",
-    "status": "confirmed",
-    "title": "【共催】リアル恐竜ショー 恐竜パーク",
-    "uid": "6f737b71f1e4e037@market-intelligence",
-    "venue_name": "新宿文化センター 大ホール"
-  },
-  {
     "address": "東京都新宿区",
     "all_day": false,
     "category": "festival",
@@ -116,7 +96,7 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "f75152092be946ef",
+    "content_hash": "e69372ee1455ba7d",
     "ends_at": "2026-07-25T19:00:00+09:00",
     "languages": [
       "ja"
@@ -127,8 +107,8 @@
     "source_id": "新宿文化センター",
     "starts_at": "2026-07-25T16:00:00+09:00",
     "status": "confirmed",
-    "title": "沖縄音楽フェスティバル",
-    "uid": "4d9044f7815200e5@market-intelligence",
+    "title": "【当日券あります！】沖縄音楽フェスティバル",
+    "uid": "334c2638346fc35c@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
   },
   {
@@ -210,6 +190,26 @@
     "title": "フレッシュ名曲コンサート ライトクラシック・コンサート",
     "uid": "76819ea6682357d7@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
+    "content_hash": "fd78fe3d03dc5817",
+    "ends_at": "2026-08-22T13:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-08-22T10:00:00+09:00",
+    "status": "confirmed",
+    "title": "0歳からの・ はじめてのオーケストラ",
+    "uid": "9e9ebbce9e0a4448@market-intelligence",
+    "venue_name": "新宿文化センター 小ホール"
   },
   {
     "address": "東京都新宿区新宿6-14-1",
