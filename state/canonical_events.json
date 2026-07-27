@@ -1,59 +1,5 @@
 [
   {
-    "address": "東京都新宿区",
-    "all_day": false,
-    "category": "festival",
-    "confidence": 0.85,
-    "content_hash": "2b91e8f4a3192eb0",
-    "description": "ほおずき！阿波踊り！今年も神楽坂の夏がやってきた！神楽坂まつり開催！",
-    "ends_at": "2026-07-25T20:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_5730.html",
-    "source_id": "新宿観光振興協会",
-    "starts_at": "2026-07-22T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "第52回  神楽坂まつり",
-    "uid": "141af01f19747797@market-intelligence"
-  },
-  {
-    "address": "東京都新宿区",
-    "all_day": false,
-    "category": "festival",
-    "confidence": 0.85,
-    "content_hash": "7d271ae0e1fce87d",
-    "description": "真夏の新宿の風物詩『新宿エイサーまつり』今年もアツく開催！",
-    "ends_at": "2026-07-25T20:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_5878.html",
-    "source_id": "新宿観光振興協会",
-    "starts_at": "2026-07-25T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "第23回 新宿エイサーまつり",
-    "uid": "0bff8d9b6b7e2211@market-intelligence"
-  },
-  {
-    "address": "東京都新宿区",
-    "all_day": false,
-    "category": "festival",
-    "confidence": 0.85,
-    "content_hash": "a1c1e4a82f920ca9",
-    "description": "「新宿エイサーまつり」とともに沖縄ポップスで盛り上がろう！",
-    "ends_at": "2026-07-25T20:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_5881.html",
-    "source_id": "新宿観光振興協会",
-    "starts_at": "2026-07-25T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "サラバンジ Music Fes 2026",
-    "uid": "399953366a8fb65c@market-intelligence"
-  },
-  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
