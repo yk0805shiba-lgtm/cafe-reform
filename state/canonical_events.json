@@ -24,26 +24,6 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "53e48b812eb09039",
-    "ends_at": "2026-08-01T18:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-08-01T15:00:00+09:00",
-    "status": "confirmed",
-    "title": "フレッシュ名曲コンサート ライトクラシック・コンサート",
-    "uid": "76819ea6682357d7@market-intelligence",
-    "venue_name": "新宿文化センター 大ホール"
-  },
-  {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
     "content_hash": "fd78fe3d03dc5817",
     "ends_at": "2026-08-22T13:00:00+09:00",
     "languages": [
