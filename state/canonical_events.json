@@ -58,6 +58,24 @@
     "uid": "8035164889314692@market-intelligence"
   },
   {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "local_event",
+    "confidence": 0.85,
+    "content_hash": "1cf75ac7d33cb744",
+    "description": "JFL開幕！横河武蔵野FCとのナイトゲームは夏祭り！",
+    "ends_at": "2026-08-30T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6047.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-08-30T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "8/30(日) JFL第1節 クリアソン新宿 vs 横河武蔵野FC",
+    "uid": "0161cc8777176598@market-intelligence"
+  },
+  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
