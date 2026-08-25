@@ -4,116 +4,10 @@ PRODID:-//cafe-reform market-intelligence//Local Event Feed//JA
 X-WR-CALNAME:Z'S store (delivery)
 X-WR-TIMEZONE:Asia/Tokyo
 BEGIN:VEVENT
-SUMMARY:★★★★ 0歳からの・ はじめてのオーケストラ
-DTSTART;TZID=Asia/Tokyo:20260822T100000
-DTEND;TZID=Asia/Tokyo:20260822T130000
-DTSTAMP:20260824T213523Z
-UID:9e9ebbce9e0a4448@market-intelligence
-SEQUENCE:0
-CATEGORIES:culture
-DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
- hinjuku.or.jp/bunka-center/event-calendar/\nImpact: distance_lt_1000m:+2\,
-  category_culture:+1\, weekend:+1\nSignals: delivery_area_overlap\n注意:
-  需要増加は予測であり保証ではありません。
-GEO:35.6918;139.7044
-LAST-MODIFIED:20260824T213523Z
-LOCATION:新宿文化センター 小ホール 東京都新宿区新宿6-1
- 4-1
-URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
-X-BUSINESS-UNIT:delivery
-X-DISTANCE-M:629
-X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekend:+1
-X-IMPACT-SCORE:4
-X-OPERATIONAL-SIGNALS:delivery_area_overlap
-X-SOURCE-EVIDENCE-IDS:ev_3b95ebda
-X-SOURCE-ID:新宿文化センター
-X-STORE-ID:delivery_01
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:★★★★ オーケストラマミューズ♪サマーコン
- サート～音楽で彩るおはなしの世界～
-DTSTART;TZID=Asia/Tokyo:20260830T110000
-DTEND;TZID=Asia/Tokyo:20260830T140000
-DTSTAMP:20260824T213523Z
-UID:221bc041776eb243@market-intelligence
-SEQUENCE:0
-CATEGORIES:culture
-DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
- hinjuku.or.jp/bunka-center/event-calendar/\nImpact: distance_lt_1000m:+2\,
-  category_culture:+1\, weekend:+1\nSignals: delivery_area_overlap\n注意:
-  需要増加は予測であり保証ではありません。
-GEO:35.6918;139.7044
-LAST-MODIFIED:20260824T213523Z
-LOCATION:新宿文化センター 小ホール 東京都新宿区新宿6-1
- 4-1
-URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
-X-BUSINESS-UNIT:delivery
-X-DISTANCE-M:629
-X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekend:+1
-X-IMPACT-SCORE:4
-X-OPERATIONAL-SIGNALS:delivery_area_overlap
-X-SOURCE-EVIDENCE-IDS:ev_ce6ca227
-X-SOURCE-ID:新宿文化センター
-X-STORE-ID:delivery_01
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:★★★★ 早稲田大学ショパンの会OB・OG有志によ
- る演奏会
-DTSTART;TZID=Asia/Tokyo:20260912T130000
-DTEND;TZID=Asia/Tokyo:20260912T160000
-DTSTAMP:20260824T213523Z
-UID:509d0ac484288558@market-intelligence
-SEQUENCE:0
-CATEGORIES:culture
-DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
- hinjuku.or.jp/bunka-center/event-calendar/\nImpact: distance_lt_1000m:+2\,
-  category_culture:+1\, weekend:+1\nSignals: delivery_area_overlap\n注意:
-  需要増加は予測であり保証ではありません。
-GEO:35.6918;139.7044
-LAST-MODIFIED:20260824T213523Z
-LOCATION:新宿文化センター 小ホール 東京都新宿区新宿6-1
- 4-1
-URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
-X-BUSINESS-UNIT:delivery
-X-DISTANCE-M:629
-X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekend:+1
-X-IMPACT-SCORE:4
-X-OPERATIONAL-SIGNALS:delivery_area_overlap
-X-SOURCE-EVIDENCE-IDS:ev_4b436cf7
-X-SOURCE-ID:新宿文化センター
-X-STORE-ID:delivery_01
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:★★★ けっけバレエvol3 ～ガニ股の大覚醒～
-DTSTART;TZID=Asia/Tokyo:20260826T140000
-DTEND;TZID=Asia/Tokyo:20260826T170000
-DTSTAMP:20260824T213523Z
-UID:9df43765598a1d71@market-intelligence
-SEQUENCE:0
-CATEGORIES:culture
-DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
- hinjuku.or.jp/bunka-center/event-calendar/\nImpact: distance_lt_1000m:+2\,
-  category_culture:+1\, weekday:+0\nSignals: delivery_area_overlap\n注意:
-  需要増加は予測であり保証ではありません。
-GEO:35.6918;139.7044
-LAST-MODIFIED:20260824T213523Z
-LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
- 4-1
-URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
-X-BUSINESS-UNIT:delivery
-X-DISTANCE-M:629
-X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekday:+0
-X-IMPACT-SCORE:3
-X-OPERATIONAL-SIGNALS:delivery_area_overlap
-X-SOURCE-EVIDENCE-IDS:ev_3285adf7
-X-SOURCE-ID:新宿文化センター
-X-STORE-ID:delivery_01
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:★★★ NBAバレエ団公演「ジゼル」
 DTSTART;TZID=Asia/Tokyo:20260829T110000
 DTEND;TZID=Asia/Tokyo:20260830T200000
-DTSTAMP:20260824T213523Z
+DTSTAMP:20260825T213519Z
 UID:8035164889314692@market-intelligence
 SEQUENCE:0
 CATEGORIES:festival
@@ -123,7 +17,7 @@ DESCRIPTION:名作バレエ！愛と赦しが生む、悲劇と救済の
  tegory_festival:+2\, weekend:+1\nSignals: evening_peak_possible\, post_eve
  nt_delivery_possible\, high_kitchen_load_possible\n注意: 需要増加は
  予測であり保証ではありません。
-LAST-MODIFIED:20260824T213523Z
+LAST-MODIFIED:20260825T213519Z
 LOCATION:東京都新宿区
 URL:https://www.kanko-shinjuku.jp/event/history/article_5904.html
 X-BUSINESS-UNIT:delivery
@@ -131,35 +25,8 @@ X-IMPACT-REASONS:distance_unknown:+0,category_festival:+2,weekend:+1
 X-IMPACT-SCORE:3
 X-OPERATIONAL-SIGNALS:evening_peak_possible,post_event_delivery_possible,h
  igh_kitchen_load_possible
-X-SOURCE-EVIDENCE-IDS:ev_905e7975
+X-SOURCE-EVIDENCE-IDS:ev_cacf2336
 X-SOURCE-ID:新宿観光振興協会
-X-STORE-ID:delivery_01
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:★★★ 【共催】 ザ・ジャパン・バレエ21
-DTSTART;TZID=Asia/Tokyo:20260921T150000
-DTEND;TZID=Asia/Tokyo:20260921T180000
-DTSTAMP:20260824T213523Z
-UID:47c4e5088635c93f@market-intelligence
-SEQUENCE:0
-CATEGORIES:culture
-DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
- hinjuku.or.jp/bunka-center/event-calendar/\nImpact: distance_lt_1000m:+2\,
-  category_culture:+1\, weekday:+0\nSignals: delivery_area_overlap\, evenin
- g_peak_possible\n注意: 需要増加は予測であり保証ではあり
- ません。
-GEO:35.6918;139.7044
-LAST-MODIFIED:20260824T213523Z
-LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
- 4-1
-URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
-X-BUSINESS-UNIT:delivery
-X-DISTANCE-M:629
-X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekday:+0
-X-IMPACT-SCORE:3
-X-OPERATIONAL-SIGNALS:delivery_area_overlap,evening_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_a01f93c3
-X-SOURCE-ID:新宿文化センター
 X-STORE-ID:delivery_01
 END:VEVENT
 BEGIN:VEVENT
@@ -167,7 +34,7 @@ SUMMARY:★★ 第38回新宿御苑森の薪能を9/24（木）に開催
  します
 DTSTART;TZID=Asia/Tokyo:20260924T110000
 DTEND;TZID=Asia/Tokyo:20260924T200000
-DTSTAMP:20260824T213523Z
+DTSTAMP:20260825T213519Z
 UID:76827b8494845af4@market-intelligence
 SEQUENCE:0
 CATEGORIES:festival
@@ -177,7 +44,7 @@ DESCRIPTION:第38回新宿御苑森の薪能を9/24（木）に開催し
  ory_festival:+2\, weekday:+0\nSignals: evening_peak_possible\, post_event_
  delivery_possible\, high_kitchen_load_possible\n注意: 需要増加は予
  測であり保証ではありません。
-LAST-MODIFIED:20260824T213523Z
+LAST-MODIFIED:20260825T213519Z
 LOCATION:東京都新宿区
 URL:https://www.kanko-shinjuku.jp/event/history/article_5919.html
 X-BUSINESS-UNIT:delivery
@@ -185,7 +52,7 @@ X-IMPACT-REASONS:distance_unknown:+0,category_festival:+2,weekday:+0
 X-IMPACT-SCORE:2
 X-OPERATIONAL-SIGNALS:evening_peak_possible,post_event_delivery_possible,h
  igh_kitchen_load_possible
-X-SOURCE-EVIDENCE-IDS:ev_7c62a8a3
+X-SOURCE-EVIDENCE-IDS:ev_bee3d8b8
 X-SOURCE-ID:新宿観光振興協会
 X-STORE-ID:delivery_01
 END:VEVENT
@@ -194,7 +61,7 @@ SUMMARY:★ 8/30(日) JFL第1節 クリアソン新宿 vs 横河武蔵野F
  C
 DTSTART;TZID=Asia/Tokyo:20260830T110000
 DTEND;TZID=Asia/Tokyo:20260830T200000
-DTSTAMP:20260824T213523Z
+DTSTAMP:20260825T213519Z
 UID:0161cc8777176598@market-intelligence
 SEQUENCE:0
 CATEGORIES:local_event
@@ -204,14 +71,14 @@ DESCRIPTION:JFL開幕！横河武蔵野FCとのナイトゲームは夏祭
  ory_local_event:+0\, weekend:+1\nSignals: evening_peak_possible\, post_eve
  nt_delivery_possible\n注意: 需要増加は予測であり保証では
  ありません。
-LAST-MODIFIED:20260824T213523Z
+LAST-MODIFIED:20260825T213519Z
 LOCATION:東京都新宿区
 URL:https://www.kanko-shinjuku.jp/event/history/article_6047.html
 X-BUSINESS-UNIT:delivery
 X-IMPACT-REASONS:distance_unknown:+0,category_local_event:+0,weekend:+1
 X-IMPACT-SCORE:1
 X-OPERATIONAL-SIGNALS:evening_peak_possible,post_event_delivery_possible
-X-SOURCE-EVIDENCE-IDS:ev_91848022
+X-SOURCE-EVIDENCE-IDS:ev_b6792422
 X-SOURCE-ID:新宿観光振興協会
 X-STORE-ID:delivery_01
 END:VEVENT
