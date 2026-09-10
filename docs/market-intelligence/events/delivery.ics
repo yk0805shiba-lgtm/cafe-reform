@@ -8,7 +8,7 @@ SUMMARY:★★ 第38回新宿御苑森の薪能を9/24（木）に開催
  します
 DTSTART;TZID=Asia/Tokyo:20260924T110000
 DTEND;TZID=Asia/Tokyo:20260924T200000
-DTSTAMP:20260909T230751Z
+DTSTAMP:20260910T230313Z
 UID:76827b8494845af4@market-intelligence
 SEQUENCE:0
 CATEGORIES:festival
@@ -18,7 +18,7 @@ DESCRIPTION:第38回新宿御苑森の薪能を9/24（木）に開催し
  ory_festival:+2\, weekday:+0\nSignals: evening_peak_possible\, post_event_
  delivery_possible\, high_kitchen_load_possible\n注意: 需要増加は予
  測であり保証ではありません。
-LAST-MODIFIED:20260909T230751Z
+LAST-MODIFIED:20260910T230313Z
 LOCATION:東京都新宿区
 URL:https://www.kanko-shinjuku.jp/event/history/article_5919.html
 X-BUSINESS-UNIT:delivery
@@ -26,7 +26,7 @@ X-IMPACT-REASONS:distance_unknown:+0,category_festival:+2,weekday:+0
 X-IMPACT-SCORE:2
 X-OPERATIONAL-SIGNALS:evening_peak_possible,post_event_delivery_possible,h
  igh_kitchen_load_possible
-X-SOURCE-EVIDENCE-IDS:ev_6cd52ff4
+X-SOURCE-EVIDENCE-IDS:ev_0a0374d2
 X-SOURCE-ID:新宿観光振興協会
 X-STORE-ID:delivery_01
 END:VEVENT
@@ -34,7 +34,7 @@ BEGIN:VEVENT
 SUMMARY:☆ 新宿パークシネマフェスティバル2026
 DTSTART;TZID=Asia/Tokyo:20261007T110000
 DTEND;TZID=Asia/Tokyo:20261009T200000
-DTSTAMP:20260909T230751Z
+DTSTAMP:20260910T230313Z
 UID:86fdf1e08ccf8ce0@market-intelligence
 SEQUENCE:0
 CATEGORIES:local_event
@@ -46,14 +46,14 @@ DESCRIPTION:星空の下、新宿中央公園の緑に包まれた憩い
  tegory_local_event:+0\, weekday:+0\nSignals: evening_peak_possible\, post_
  event_delivery_possible\n注意: 需要増加は予測であり保証で
  はありません。
-LAST-MODIFIED:20260909T230751Z
+LAST-MODIFIED:20260910T230313Z
 LOCATION:東京都新宿区
 URL:https://www.kanko-shinjuku.jp/event/history/article_6283.html
 X-BUSINESS-UNIT:delivery
 X-IMPACT-REASONS:distance_unknown:+0,category_local_event:+0,weekday:+0
 X-IMPACT-SCORE:0
 X-OPERATIONAL-SIGNALS:evening_peak_possible,post_event_delivery_possible
-X-SOURCE-EVIDENCE-IDS:ev_813ecc29
+X-SOURCE-EVIDENCE-IDS:ev_565b117e
 X-SOURCE-ID:新宿観光振興協会
 X-STORE-ID:delivery_01
 END:VEVENT
