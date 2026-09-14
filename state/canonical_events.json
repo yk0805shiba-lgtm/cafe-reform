@@ -58,6 +58,24 @@
     "uid": "76827b8494845af4@market-intelligence"
   },
   {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "local_event",
+    "confidence": 0.85,
+    "content_hash": "1de559bd66acb5b2",
+    "description": "9/27(日) JFL第5節 クリアソン新宿 vs 沖縄SVは、「新宿の日2026」と題して、MUFGスタジアム(国立競技場)にて開催されま…",
+    "ends_at": "2026-09-27T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6286.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-09-27T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "9/27(日)は「新宿の日2026」！クリアソン新宿 vs 沖縄SVをMUFGスタジアム(国立競技場)で開催！",
+    "uid": "3f56a782c4d650f5@market-intelligence"
+  },
+  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
