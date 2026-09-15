@@ -76,6 +76,24 @@
     "uid": "3f56a782c4d650f5@market-intelligence"
   },
   {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "festival",
+    "confidence": 0.85,
+    "content_hash": "b39fa73dbaeec066",
+    "description": "スポーツ！ワークショップ！グルメ！誰でも楽しめる体験型イベントが今年も開催されます！",
+    "ends_at": "2026-10-04T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6287.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-10-03T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "ダイバーシティ・パーク2026 in 新宿",
+    "uid": "af8be7d5f98132a2@market-intelligence"
+  },
+  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
