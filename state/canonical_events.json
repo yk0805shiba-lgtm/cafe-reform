@@ -24,6 +24,26 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
+    "content_hash": "258432e1482d13bd",
+    "ends_at": "2026-09-19T16:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-09-19T13:00:00+09:00",
+    "status": "confirmed",
+    "title": "バッハ「マタイ受難曲」演奏会",
+    "uid": "bdaa90bd971a40bf@market-intelligence",
+    "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
     "content_hash": "a2b48a9fe690f9ae",
     "ends_at": "2026-09-21T18:00:00+09:00",
     "languages": [
@@ -150,6 +170,26 @@
     "status": "confirmed",
     "title": "新宿パークシネマフェスティバル2026",
     "uid": "86fdf1e08ccf8ce0@market-intelligence"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
+    "content_hash": "b219c7858600ffba",
+    "ends_at": "2026-10-12T17:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-10-12T14:00:00+09:00",
+    "status": "confirmed",
+    "title": "青山フィルハーモニーOB・OGオーケストラ 第35回定期演奏会",
+    "uid": "53a2e525ff8eb3db@market-intelligence",
+    "venue_name": "新宿文化センター 大ホール"
   },
   {
     "address": "東京都新宿区新宿6-14-1",
