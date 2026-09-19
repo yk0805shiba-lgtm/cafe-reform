@@ -4,26 +4,6 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "85be0774ea9bbbf1",
-    "ends_at": "2026-09-12T16:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-09-12T13:00:00+09:00",
-    "status": "confirmed",
-    "title": "早稲田大学ショパンの会OB・OG有志による演奏会",
-    "uid": "509d0ac484288558@market-intelligence",
-    "venue_name": "新宿文化センター 小ホール"
-  },
-  {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
     "content_hash": "258432e1482d13bd",
     "ends_at": "2026-09-19T16:00:00+09:00",
     "languages": [
@@ -138,7 +118,7 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "e9862de12aeaee8e",
+    "content_hash": "06a1ea511306d666",
     "ends_at": "2026-10-04T15:00:00+09:00",
     "languages": [
       "ja"
@@ -149,8 +129,8 @@
     "source_id": "新宿文化センター",
     "starts_at": "2026-10-04T12:00:00+09:00",
     "status": "confirmed",
-    "title": "令和8年度新宿区生涯学習フェスティバル「邦楽のつどい」令和８年度新宿区生涯学習フェスティバル「邦楽のつどい」",
-    "uid": "773c213cdb7c7689@market-intelligence",
+    "title": "令和８年度新宿区生涯学習フェスティバル「邦楽のつどい」",
+    "uid": "6dbd419be6d447c3@market-intelligence",
     "venue_name": "新宿文化センター 小ホール"
   },
   {
@@ -230,6 +210,26 @@
     "title": "Sing！Shinjuku！",
     "uid": "f1ed3be12e8296b4@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
+    "content_hash": "8a4d5ec154e5878b",
+    "ends_at": "2026-10-27T17:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-10-27T14:00:00+09:00",
+    "status": "confirmed",
+    "title": "中高年世代活躍応援イベント これからの働き方を考える、自分らしい一歩のふみだし方",
+    "uid": "f3860fed73787091@market-intelligence",
+    "venue_name": "新宿文化センター 小ホール"
   },
   {
     "address": "東京都新宿区新宿6-14-1",
