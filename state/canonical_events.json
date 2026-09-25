@@ -62,24 +62,6 @@
   {
     "address": "東京都新宿区",
     "all_day": false,
-    "category": "festival",
-    "confidence": 0.85,
-    "content_hash": "89334ee6815bdac6",
-    "description": "お出かけ前に、本HP・特設サイト・公式Xをご確認ください",
-    "ends_at": "2026-09-24T20:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_5919.html",
-    "source_id": "新宿観光振興協会",
-    "starts_at": "2026-09-24T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "第38回新宿御苑森の薪能の開催場所は、【9月24日（木）13時】までにお知らせします",
-    "uid": "3ea46f79ac4e1447@market-intelligence"
-  },
-  {
-    "address": "東京都新宿区",
-    "all_day": false,
     "category": "local_event",
     "confidence": 0.85,
     "content_hash": "1de559bd66acb5b2",
@@ -210,6 +192,24 @@
     "title": "オーケストラアンサンブル豊島 第38回定期演奏会",
     "uid": "b4e71fd42f682de3@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "local_event",
+    "confidence": 0.85,
+    "content_hash": "e828e1c9b1226167",
+    "description": "新宿まちフェス2026のテーマは「POWER of SHINJUKU」！「まちフェス」とは新宿にゆかりのある企業、地域の皆さまや商店街、行…",
+    "ends_at": "2026-11-08T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6401.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-10-24T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "新宿まちフェス2026",
+    "uid": "77a011707d729070@market-intelligence"
   },
   {
     "address": "東京都新宿区新宿6-14-1",
