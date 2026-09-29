@@ -4,26 +4,6 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "a2b48a9fe690f9ae",
-    "ends_at": "2026-09-21T18:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-09-21T15:00:00+09:00",
-    "status": "confirmed",
-    "title": "【共催】 ザ・ジャパン・バレエ21",
-    "uid": "47c4e5088635c93f@market-intelligence",
-    "venue_name": "新宿文化センター 大ホール"
-  },
-  {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
     "content_hash": "de20d53f4f4acf39",
     "ends_at": "2026-09-22T14:00:00+09:00",
     "languages": [
@@ -42,20 +22,38 @@
   {
     "address": "東京都新宿区",
     "all_day": false,
-    "category": "local_event",
+    "category": "food",
     "confidence": 0.85,
-    "content_hash": "1de559bd66acb5b2",
-    "description": "9/27(日) JFL第5節 クリアソン新宿 vs 沖縄SVは、「新宿の日2026」と題して、MUFGスタジアム(国立競技場)にて開催されま…",
-    "ends_at": "2026-09-27T20:00:00+09:00",
+    "content_hash": "109d8d59af18fb03",
+    "description": "ラーメンを愛する皆さま大注目！今年もやりますラーメンラリー！",
+    "ends_at": "2027-01-31T20:00:00+09:00",
     "languages": [
       "ja"
     ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6286.html",
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6347.html",
     "source_id": "新宿観光振興協会",
-    "starts_at": "2026-09-27T11:00:00+09:00",
+    "starts_at": "2026-10-01T11:00:00+09:00",
     "status": "confirmed",
-    "title": "9/27(日)は「新宿の日2026」！クリアソン新宿 vs 沖縄SVをMUFGスタジアム(国立競技場)で開催！",
-    "uid": "3f56a782c4d650f5@market-intelligence"
+    "title": "高田馬場・早稲田ラーメンラリー2026",
+    "uid": "566ad884142830c4@market-intelligence"
+  },
+  {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "festival",
+    "confidence": 0.85,
+    "content_hash": "4df9e18083b3f34f",
+    "description": "「新宿歌舞伎町春画展WA」第4弾。浮世絵最高峰の春画三部作「三源氏」がそろい踏みする展覧会。",
+    "ends_at": "2026-11-29T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6187.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-10-03T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "歌川国貞・歌川国芳ー新宿歌舞伎町春画展WA",
+    "uid": "789642f7b9009863@market-intelligence"
   },
   {
     "address": "東京都新宿区",
