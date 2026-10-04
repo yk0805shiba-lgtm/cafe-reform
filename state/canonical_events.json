@@ -58,26 +58,6 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "9e3ae63db0db6f5f",
-    "ends_at": "2026-10-03T16:30:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-10-03T13:30:00+09:00",
-    "status": "confirmed",
-    "title": "新宿文化センター落語会10/3実施 新宿文化センター落語会 ～祝・立川談寛 真打昇進記念スペシャル～",
-    "uid": "56302f30c927cea4@market-intelligence",
-    "venue_name": "新宿文化センター 小ホール"
-  },
-  {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
     "content_hash": "06a1ea511306d666",
     "ends_at": "2026-10-04T15:00:00+09:00",
     "languages": [
@@ -247,6 +227,26 @@
     "status": "confirmed",
     "title": "NAOコーラスグループ第28回演奏会",
     "uid": "c15d507d4c3350ea@market-intelligence",
+    "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
+    "content_hash": "ed29fdb9bb3d9437",
+    "ends_at": "2026-11-08T14:30:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-11-08T11:30:00+09:00",
+    "status": "confirmed",
+    "title": "新宿ユース・ステージパフォーマンス2026新宿ユース・ステージパフォーマンス2026",
+    "uid": "3c0061b87822554e@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
   }
 ]
