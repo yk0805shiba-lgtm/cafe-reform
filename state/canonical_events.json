@@ -54,26 +54,6 @@
     "uid": "af8be7d5f98132a2@market-intelligence"
   },
   {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
-    "content_hash": "06a1ea511306d666",
-    "ends_at": "2026-10-04T15:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-10-04T12:00:00+09:00",
-    "status": "confirmed",
-    "title": "令和８年度新宿区生涯学習フェスティバル「邦楽のつどい」",
-    "uid": "6dbd419be6d447c3@market-intelligence",
-    "venue_name": "新宿文化センター 小ホール"
-  },
-  {
     "address": "東京都新宿区",
     "all_day": false,
     "category": "local_event",
@@ -234,7 +214,27 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "ed29fdb9bb3d9437",
+    "content_hash": "708371ebf28579d5",
+    "ends_at": "2026-11-03T14:30:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-11-03T11:30:00+09:00",
+    "status": "confirmed",
+    "title": "音楽・コーラスの集い音楽・コーラスのつどい",
+    "uid": "acfaf35259538d69@market-intelligence",
+    "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
+    "content_hash": "164425feb41651fc",
     "ends_at": "2026-11-08T14:30:00+09:00",
     "languages": [
       "ja"
@@ -245,8 +245,8 @@
     "source_id": "新宿文化センター",
     "starts_at": "2026-11-08T11:30:00+09:00",
     "status": "confirmed",
-    "title": "新宿ユース・ステージパフォーマンス2026新宿ユース・ステージパフォーマンス2026",
-    "uid": "3c0061b87822554e@market-intelligence",
+    "title": "新宿ユース・ステージパフォーマンス2026",
+    "uid": "a3aa5e8b76d2a4f1@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
   }
 ]
