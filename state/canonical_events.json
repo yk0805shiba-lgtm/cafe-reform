@@ -2,24 +2,6 @@
   {
     "address": "東京都新宿区",
     "all_day": false,
-    "category": "food",
-    "confidence": 0.85,
-    "content_hash": "109d8d59af18fb03",
-    "description": "ラーメンを愛する皆さま大注目！今年もやりますラーメンラリー！",
-    "ends_at": "2027-01-31T20:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6347.html",
-    "source_id": "新宿観光振興協会",
-    "starts_at": "2026-10-01T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "高田馬場・早稲田ラーメンラリー2026",
-    "uid": "566ad884142830c4@market-intelligence"
-  },
-  {
-    "address": "東京都新宿区",
-    "all_day": false,
     "category": "festival",
     "confidence": 0.85,
     "content_hash": "4df9e18083b3f34f",
