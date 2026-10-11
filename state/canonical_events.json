@@ -2,42 +2,6 @@
   {
     "address": "東京都新宿区",
     "all_day": false,
-    "category": "festival",
-    "confidence": 0.85,
-    "content_hash": "4df9e18083b3f34f",
-    "description": "「新宿歌舞伎町春画展WA」第4弾。浮世絵最高峰の春画三部作「三源氏」がそろい踏みする展覧会。",
-    "ends_at": "2026-11-29T20:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6187.html",
-    "source_id": "新宿観光振興協会",
-    "starts_at": "2026-10-03T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "歌川国貞・歌川国芳ー新宿歌舞伎町春画展WA",
-    "uid": "789642f7b9009863@market-intelligence"
-  },
-  {
-    "address": "東京都新宿区",
-    "all_day": false,
-    "category": "festival",
-    "confidence": 0.85,
-    "content_hash": "b39fa73dbaeec066",
-    "description": "スポーツ！ワークショップ！グルメ！誰でも楽しめる体験型イベントが今年も開催されます！",
-    "ends_at": "2026-10-04T20:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6287.html",
-    "source_id": "新宿観光振興協会",
-    "starts_at": "2026-10-03T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "ダイバーシティ・パーク2026 in 新宿",
-    "uid": "af8be7d5f98132a2@market-intelligence"
-  },
-  {
-    "address": "東京都新宿区",
-    "all_day": false,
     "category": "local_event",
     "confidence": 0.85,
     "content_hash": "2157c7a6e8ac8fa6",
