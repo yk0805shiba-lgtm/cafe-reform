@@ -200,6 +200,26 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
+    "content_hash": "9130e5afb51f08ba",
+    "ends_at": "2026-11-04T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-11-04T17:00:00+09:00",
+    "status": "confirmed",
+    "title": "VIVANT 悪役大会議室",
+    "uid": "068608f390af6569@market-intelligence",
+    "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
     "content_hash": "164425feb41651fc",
     "ends_at": "2026-11-08T14:30:00+09:00",
     "languages": [
