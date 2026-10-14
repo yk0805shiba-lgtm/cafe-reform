@@ -216,5 +216,23 @@
     "title": "新宿ユース・ステージパフォーマンス2026",
     "uid": "a3aa5e8b76d2a4f1@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "festival",
+    "confidence": 0.85,
+    "content_hash": "d1cf1a04c0a67c90",
+    "description": "SOMPO美術館開館50周年を記念した特別な落語会！",
+    "ends_at": "2026-11-29T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6574.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-11-29T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "開館50周年記念「SOMPO美術館×東京モード学園 落語会」",
+    "uid": "39e86486d20ea621@market-intelligence"
   }
 ]
