@@ -8,7 +8,7 @@ SUMMARY:★★★★ オーケストラアンサンブル豊島 第38回
  定期演奏会
 DTSTART;TZID=Asia/Tokyo:20261018T133000
 DTEND;TZID=Asia/Tokyo:20261018T163000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:b4e71fd42f682de3@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -18,7 +18,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -27,7 +27,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekend:+1
 X-IMPACT-SCORE:4
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_ddfa878f
+X-SOURCE-EVIDENCE-IDS:ev_578fab4d
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -35,7 +35,7 @@ BEGIN:VEVENT
 SUMMARY:★★★★ Sing！Shinjuku！
 DTSTART;TZID=Asia/Tokyo:20261025T140000
 DTEND;TZID=Asia/Tokyo:20261025T170000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:f1ed3be12e8296b4@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -45,7 +45,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -54,7 +54,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekend:+1
 X-IMPACT-SCORE:4
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_4352fd18
+X-SOURCE-EVIDENCE-IDS:ev_9dd006ff
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -62,7 +62,7 @@ BEGIN:VEVENT
 SUMMARY:★★★★ NAOコーラスグループ第28回演奏会
 DTSTART;TZID=Asia/Tokyo:20261031T140000
 DTEND;TZID=Asia/Tokyo:20261031T170000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:c15d507d4c3350ea@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -72,7 +72,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -81,7 +81,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekend:+1
 X-IMPACT-SCORE:4
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_f59aa7d4
+X-SOURCE-EVIDENCE-IDS:ev_02de3897
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -90,7 +90,7 @@ SUMMARY:★★★★ 新宿フィルハーモニー管弦楽団 第94回
  定期演奏会
 DTSTART;TZID=Asia/Tokyo:20261101T140000
 DTEND;TZID=Asia/Tokyo:20261101T170000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:8891272304ae827c@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -100,7 +100,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -109,7 +109,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekend:+1
 X-IMPACT-SCORE:4
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_60249814
+X-SOURCE-EVIDENCE-IDS:ev_53f8044b
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -118,7 +118,7 @@ SUMMARY:★★★★ 新宿ユース・ステージパフォーマンス20
  26
 DTSTART;TZID=Asia/Tokyo:20261108T113000
 DTEND;TZID=Asia/Tokyo:20261108T143000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:a3aa5e8b76d2a4f1@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -128,7 +128,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -137,7 +137,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekend:+1
 X-IMPACT-SCORE:4
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_add7cd02
+X-SOURCE-EVIDENCE-IDS:ev_b290726e
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -146,7 +146,7 @@ SUMMARY:★★★ 青山フィルハーモニーOB・OGオーケストラ
  第35回定期演奏会
 DTSTART;TZID=Asia/Tokyo:20261012T140000
 DTEND;TZID=Asia/Tokyo:20261012T170000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:53a2e525ff8eb3db@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -156,7 +156,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -165,7 +165,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekday:+0
 X-IMPACT-SCORE:3
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_30ee54fc
+X-SOURCE-EVIDENCE-IDS:ev_07725b33
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -174,7 +174,7 @@ SUMMARY:★★★ 【レフカダ市友好都市交流記念事業】朗
  読で味わう小泉八雲の世界『耳なし芳一』
 DTSTART;TZID=Asia/Tokyo:20261019T143000
 DTEND;TZID=Asia/Tokyo:20261019T173000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:ec03ec3a1420cfae@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -184,7 +184,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 小ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -193,7 +193,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekday:+0
 X-IMPACT-SCORE:3
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_278852ab
+X-SOURCE-EVIDENCE-IDS:ev_1c111d76
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -202,7 +202,7 @@ SUMMARY:★★★ 中高年世代活躍応援イベント これからの
  働き方を考える、自分らしい一歩のふみだし方
 DTSTART;TZID=Asia/Tokyo:20261027T140000
 DTEND;TZID=Asia/Tokyo:20261027T170000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:f3860fed73787091@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -212,7 +212,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 小ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -221,7 +221,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekday:+0
 X-IMPACT-SCORE:3
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_1f7e9f8b
+X-SOURCE-EVIDENCE-IDS:ev_77ab874e
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -230,7 +230,7 @@ SUMMARY:★★★ 令和8年度新宿区生涯学習フェスティバル
  音楽・コーラスのつどい2026
 DTSTART;TZID=Asia/Tokyo:20261103T110000
 DTEND;TZID=Asia/Tokyo:20261103T140000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:264bfe5793aae41a@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -240,7 +240,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\, daytime_peak_possible\n注意: 需要
  増加は予測であり保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -249,7 +249,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekday:+0
 X-IMPACT-SCORE:3
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity,daytime_peak_possible
-X-SOURCE-EVIDENCE-IDS:ev_64ba4e94
+X-SOURCE-EVIDENCE-IDS:ev_d964a3e7
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -257,7 +257,7 @@ BEGIN:VEVENT
 SUMMARY:★★★ VIVANT 悪役大会議室
 DTSTART;TZID=Asia/Tokyo:20261104T170000
 DTEND;TZID=Asia/Tokyo:20261104T200000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:068608f390af6569@market-intelligence
 SEQUENCE:0
 CATEGORIES:culture
@@ -267,7 +267,7 @@ DESCRIPTION:情報源: 新宿文化センター\nURL: https://www.regasu-s
  nt_walk_in\, takeout_opportunity\n注意: 需要増加は予測であり
  保証ではありません。
 GEO:35.6918;139.7044
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:新宿文化センター 大ホール 東京都新宿区新宿6-1
  4-1
 URL:https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/
@@ -276,7 +276,7 @@ X-IMPACT-REASONS:distance_lt_1000m:+2,category_culture:+1,weekday:+0
 X-IMPACT-SCORE:3
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,takeout_oppor
  tunity
-X-SOURCE-EVIDENCE-IDS:ev_1ba8b29f
+X-SOURCE-EVIDENCE-IDS:ev_7ee7ce9c
 X-SOURCE-ID:新宿文化センター
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -285,7 +285,7 @@ SUMMARY:★★★ 開館50周年記念「SOMPO美術館×東京モード
  学園 落語会」
 DTSTART;TZID=Asia/Tokyo:20261129T110000
 DTEND;TZID=Asia/Tokyo:20261129T200000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:39e86486d20ea621@market-intelligence
 SEQUENCE:0
 CATEGORIES:festival
@@ -295,14 +295,14 @@ DESCRIPTION:SOMPO美術館開館50周年を記念した特別な落語会
  _festival:+2\, weekend:+1\nSignals: pre_event_walk_in\, during_event_walk_
  in\, daytime_peak_possible\n注意: 需要増加は予測であり保証
  ではありません。
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:東京都新宿区
 URL:https://www.kanko-shinjuku.jp/event/history/article_6574.html
 X-IMPACT-REASONS:distance_unknown:+0,category_festival:+2,weekend:+1
 X-IMPACT-SCORE:3
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,daytime_peak_
  possible
-X-SOURCE-EVIDENCE-IDS:ev_fbfd9ab1
+X-SOURCE-EVIDENCE-IDS:ev_8a0b1aa6
 X-SOURCE-ID:新宿観光振興協会
 X-STORE-ID:cafe_01
 END:VEVENT
@@ -310,7 +310,7 @@ BEGIN:VEVENT
 SUMMARY:★ 新宿まちフェス2026
 DTSTART;TZID=Asia/Tokyo:20261024T110000
 DTEND;TZID=Asia/Tokyo:20261108T200000
-DTSTAMP:20261014T234849Z
+DTSTAMP:20261015T233709Z
 UID:77a011707d729070@market-intelligence
 SEQUENCE:0
 CATEGORIES:local_event
@@ -321,14 +321,14 @@ DESCRIPTION:新宿まちフェス2026のテーマは「POWER of SHINJUKU
  ct: distance_unknown:+0\, category_local_event:+0\, weekend:+1\nSignals: p
  re_event_walk_in\, during_event_walk_in\, daytime_peak_possible\n注意: 
  需要増加は予測であり保証ではありません。
-LAST-MODIFIED:20261014T234849Z
+LAST-MODIFIED:20261015T233709Z
 LOCATION:東京都新宿区
 URL:https://www.kanko-shinjuku.jp/event/history/article_6401.html
 X-IMPACT-REASONS:distance_unknown:+0,category_local_event:+0,weekend:+1
 X-IMPACT-SCORE:1
 X-OPERATIONAL-SIGNALS:pre_event_walk_in,during_event_walk_in,daytime_peak_
  possible
-X-SOURCE-EVIDENCE-IDS:ev_6d69d32c
+X-SOURCE-EVIDENCE-IDS:ev_2e5eb265
 X-SOURCE-ID:新宿観光振興協会
 X-STORE-ID:cafe_01
 END:VEVENT
