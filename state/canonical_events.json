@@ -238,6 +238,26 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
+    "content_hash": "c4f1b8ee06beefa6",
+    "ends_at": "2026-11-11T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-11-11T17:00:00+09:00",
+    "status": "confirmed",
+    "title": "きたやまおさむプロデュース 杉田二郎 with きたやまおさむ80歳バースデーコンサート「ありがとう ありがとう」",
+    "uid": "052a0ef535946284@market-intelligence",
+    "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
     "content_hash": "4fd4b4d6b070c191",
     "ends_at": "2026-11-26T21:30:00+09:00",
     "languages": [
