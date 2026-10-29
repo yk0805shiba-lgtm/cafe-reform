@@ -138,6 +138,24 @@
     "venue_name": "新宿文化センター 大ホール"
   },
   {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "festival",
+    "confidence": 0.85,
+    "content_hash": "71387960ccc69429",
+    "description": "花園神社・十二社 熊野神社・成子天神社にて「新宿酉の市」が行われます。",
+    "ends_at": "2026-11-19T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6631.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-11-07T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "新宿酉の市",
+    "uid": "4d95d5b8b5327738@market-intelligence"
+  },
+  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
