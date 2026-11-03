@@ -1,23 +1,5 @@
 [
   {
-    "address": "東京都新宿区",
-    "all_day": false,
-    "category": "festival",
-    "confidence": 0.85,
-    "content_hash": "32924ba2b1d4ff24",
-    "description": "秋の散策がてら、新宿区の染色業にふれてみませんか？",
-    "ends_at": "2026-11-01T20:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6629.html",
-    "source_id": "新宿観光振興協会",
-    "starts_at": "2026-10-29T11:00:00+09:00",
-    "status": "confirmed",
-    "title": "お江戸新宿「紺屋めぐり」～染色6業種10工房を巡る秋～",
-    "uid": "af8fa374241eff6b@market-intelligence"
-  },
-  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
