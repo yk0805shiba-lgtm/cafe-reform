@@ -276,6 +276,24 @@
     "venue_name": "新宿文化センター 展示室"
   },
   {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "festival",
+    "confidence": 0.85,
+    "content_hash": "39d8dba10c2ca56c",
+    "description": "アカペラと朗読でお届けする珠玉のクリスマスコンサート！",
+    "ends_at": "2026-12-25T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6689.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-12-25T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "ストーリーコンサート®「わたしたちのクリスマス」",
+    "uid": "4ca154088a55e96d@market-intelligence"
+  },
+  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
