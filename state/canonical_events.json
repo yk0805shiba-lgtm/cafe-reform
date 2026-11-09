@@ -4,26 +4,6 @@
     "all_day": false,
     "category": "culture",
     "confidence": 0.9,
-    "content_hash": "91bffddeccb9d1af",
-    "ends_at": "2026-11-01T17:00:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-11-01T14:00:00+09:00",
-    "status": "confirmed",
-    "title": "新宿フィルハーモニー管弦楽団 第94回定期演奏会",
-    "uid": "8891272304ae827c@market-intelligence",
-    "venue_name": "新宿文化センター 大ホール"
-  },
-  {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
     "content_hash": "9130e5afb51f08ba",
     "ends_at": "2026-11-04T20:00:00+09:00",
     "languages": [
@@ -56,26 +36,6 @@
     "status": "confirmed",
     "title": "新宿酉の市",
     "uid": "4d95d5b8b5327738@market-intelligence"
-  },
-  {
-    "address": "東京都新宿区新宿6-14-1",
-    "all_day": false,
-    "category": "culture",
-    "confidence": 0.9,
-    "content_hash": "164425feb41651fc",
-    "ends_at": "2026-11-08T14:30:00+09:00",
-    "languages": [
-      "ja"
-    ],
-    "latitude": 35.6918,
-    "longitude": 139.7044,
-    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
-    "source_id": "新宿文化センター",
-    "starts_at": "2026-11-08T11:30:00+09:00",
-    "status": "confirmed",
-    "title": "新宿ユース・ステージパフォーマンス2026",
-    "uid": "a3aa5e8b76d2a4f1@market-intelligence",
-    "venue_name": "新宿文化センター 大ホール"
   },
   {
     "address": "東京都新宿区新宿6-14-1",
@@ -194,6 +154,26 @@
     "title": "加藤麻衣子オルガンコンサート",
     "uid": "93165b4a2eb1ebe1@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区新宿6-14-1",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.9,
+    "content_hash": "47971fd0e3fe656b",
+    "ends_at": "2026-12-06T13:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "latitude": 35.6918,
+    "longitude": 139.7044,
+    "official_url": "https://www.regasu-shinjuku.or.jp/bunka-center/event-calendar/",
+    "source_id": "新宿文化センター",
+    "starts_at": "2026-12-06T10:00:00+09:00",
+    "status": "confirmed",
+    "title": "第35回 AA中央地区 オープンスピーカーズミーティング「AAと私—中央地区40周年—」",
+    "uid": "f7d2efa2e1b5ba67@market-intelligence",
+    "venue_name": "新宿文化センター 小ホール"
   },
   {
     "address": "東京都新宿区新宿6-14-1",
