@@ -20,6 +20,24 @@
     "venue_name": "新宿文化センター 大ホール"
   },
   {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "culture",
+    "confidence": 0.85,
+    "content_hash": "a54ec7f37c470a23",
+    "description": "おいしい！たのしい！東京周遊フェス「TOKYO周穫祭2026」。当協会が出展します！",
+    "ends_at": "2026-11-22T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6778.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-11-21T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "TOKYO周穫祭2026",
+    "uid": "805a001d9e65debf@market-intelligence"
+  },
+  {
     "address": "東京都新宿区新宿6-14-1",
     "all_day": false,
     "category": "culture",
@@ -274,6 +292,24 @@
     "title": "小林研一郎 新宿区名誉区民顕彰記念コンサート ベートーヴェン「交響曲第九番」",
     "uid": "804797d4e362d53e@market-intelligence",
     "venue_name": "新宿文化センター 大ホール"
+  },
+  {
+    "address": "東京都新宿区",
+    "all_day": false,
+    "category": "festival",
+    "confidence": 0.85,
+    "content_hash": "95456b8f62ce40e6",
+    "description": "伝説のグループが、ハナミチ東京歌舞伎町劇場でライブ開催！",
+    "ends_at": "2026-12-26T20:00:00+09:00",
+    "languages": [
+      "ja"
+    ],
+    "official_url": "https://www.kanko-shinjuku.jp/event/history/article_6837.html",
+    "source_id": "新宿観光振興協会",
+    "starts_at": "2026-12-26T11:00:00+09:00",
+    "status": "confirmed",
+    "title": "ひとりTPDプロデュース東京パフォーマンスドール [THE THEATER LIVE]",
+    "uid": "3fe146f1f1af6d15@market-intelligence"
   },
   {
     "address": "東京都新宿区新宿6-14-1",
